@@ -1,0 +1,248 @@
+.headerdiv {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+body .information {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+body .information .top {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color: #e5e4e2;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+body .information .top > div {
+  margin: 0 auto;
+}
+body .information .top__paris {
+  display: flex;
+  background-color: #c0c0c0;
+  justify-content: center;
+  margin-left: auto;
+  width: 100%;
+}
+body .information .top__paris i {
+  margin-right: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 45px;
+}
+body .information .top__explore {
+  display: flex;
+  justify-content: center;
+  background-color: #FF79DA;
+  width: 70%;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+body .information .top p {
+  text-align: center;
+}
+body .information .process {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+body .information .process > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body .information .process__title {
+  display: flex;
+  width: 100%;
+}
+body .information .process__instructions .steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+}
+body .information .process__instructions .steps i {
+  margin-right: auto;
+  text-justify: middle;
+  text-align: center;
+  line-height: 20px;
+  align-self: center;
+  position: relative;
+  margin-left: auto;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  align-self: center;
+}
+body .information .process__instructions .steps #one, body .information .process__instructions .steps #two, body .information .process__instructions .steps #three {
+  line-height: 12px;
+  border-radius: 50px;
+  padding: 15px;
+  background-color: #FF79DA;
+  font-size: 10px;
+  vertical-align: middle;
+  height: 2px;
+  width: 2px;
+  text-align: center;
+  position: absolute;
+  margin-left: 0;
+  margin-right: 20px;
+  transform: translate(-30%);
+  justify-content: center;
+}
+body .information .process__instructions .steps p {
+  margin-right: auto;
+  font-size: 12px;
+}
+body .restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e5e4e2;
+  width: 100%;
+}
+body .restaurants > div {
+  display: flex;
+  flex-direction: column;
+}
+body .restaurants__title {
+  display: flex;
+  width: 100%;
+}
+body .restaurants__available {
+  display: flex;
+  width: 100%;
+}
+body .restaurants__available .options {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 15px auto;
+  border-radius: 25px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+body .restaurants__available .options__picture {
+  display: flex;
+  width: 100%;
+  height: 60%;
+}
+body .restaurants__available .options__picture img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+body .restaurants__available .options__description {
+  height: 40%;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+body .restaurants__available .options__description .name {
+  font-weight: bold;
+}
+body .restaurants__available .options__description .city {
+  font-weight: 300;
+}
+body .footerdiv {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: #000000;
+  color: #FFFFFF;
+  bottom: 0;
+  flex-wrap: nowrap;
+}
+body .footerdiv__title {
+  display: flex;
+  font-family: "Shrikhand", cursive;
+  padding-left: 40px;
+  font-size: 20px;
+  padding-bottom: 0;
+}
+body .footerdiv ul li {
+  list-style-type: none;
+  width: 100%;
+  line-height: 20px;
+  margin: 5px 0;
+  display: inline;
+}
+body .footerdiv ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  list-style-type: none;
+}
+
+html body {
+  background-color: #f6f6f6;
+}
+html body h1 {
+  font-family: "Shrikhand", cursive;
+}
+html body main .meal {
+  font-weight: 300;
+}
+html body main section .sectionone {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+html body main section .sectionone__topimage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+html body main section .sectionone__topimage img {
+  width: 100%;
+}
+html body main section .sectionone__titlediv {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  margin-top: -30px;
+  background-color: #f6f6f6;
+}
+html body main section .menu {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  margin: 15px 5px;
+  border-radius: 20px;
+}
+html body main section .menu__item {
+  font-weight: 700;
+}
+html body main section .menu__ingredient {
+  font-weight: 300;
+}
+html body main section .menu__ingredient .cost {
+  font-weight: bold;
+}
+html body main .order {
+  display: flex;
+  justify-content: center;
+  background-color: #FF79DA;
+  width: 50%;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+/*# sourceMappingURL=style.css.map */

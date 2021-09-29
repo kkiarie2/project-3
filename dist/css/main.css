@@ -1,0 +1,520 @@
+.headerdiv {
+  font-family: "Shrikhand", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+body .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+body .information .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  background-color: #e5e4e2;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+body .information .top > div {
+  margin: 0 auto;
+}
+
+body .information .top__paris {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #c0c0c0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  width: 100%;
+}
+
+body .information .top__paris i {
+  margin-right: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 45px;
+}
+
+body .information .top__explore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FF79DA;
+  width: 70%;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+body .information .top p {
+  text-align: center;
+}
+
+body .information .process {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 0;
+}
+
+body .information .process > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+body .information .process__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body .information .process__instructions .steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 15px;
+}
+
+body .information .process__instructions .steps i {
+  margin-right: auto;
+  text-justify: middle;
+  text-align: center;
+  line-height: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  margin-left: auto;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-self: center;
+}
+
+body .information .process__instructions .steps #one, body .information .process__instructions .steps #two, body .information .process__instructions .steps #three {
+  line-height: 10px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #FF79DA;
+  font-size: 10px;
+  vertical-align: middle;
+  text-align: center;
+  position: absolute;
+  margin-left: 0;
+  margin-right: 20px;
+  -webkit-transform: translate(-30%);
+          transform: translate(-30%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .information .process__instructions .steps p {
+  margin-right: auto;
+  font-size: 12px;
+}
+
+body .restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e5e4e2;
+  width: 100%;
+}
+
+body .restaurants > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .restaurants__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body .restaurants__available {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body .restaurants__available .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  margin: 15px auto;
+  border-radius: 25px;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+body .restaurants__available .options__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60%;
+}
+
+body .restaurants__available .options__picture img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+body .restaurants__available .options__description {
+  height: 40%;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+body .restaurants__available .options__description .name {
+  font-weight: bold;
+}
+
+body .restaurants__available .options__description .city {
+  font-weight: 300;
+}
+
+body .footerdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #000000;
+  color: #FFFFFF;
+  bottom: 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+body .footerdiv__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Shrikhand", cursive;
+  padding-left: 40px;
+  font-size: 20px;
+  padding-bottom: 0;
+}
+
+body .footerdiv ul li {
+  list-style-type: none;
+  width: 100%;
+  line-height: 20px;
+  margin: 5px 0;
+  display: inline;
+}
+
+body .footerdiv ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+  list-style-type: none;
+}
+
+body {
+  margin: 0 5px;
+}
+
+body h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+body main {
+  background-color: #f6f6f6;
+}
+
+body main .wrapdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body main .wrapdiv .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body main .wrapdiv .intro__topimage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+body main .wrapdiv .intro__topimage img {
+  width: 100%;
+}
+
+body main .wrapdiv .intro__titlediv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  margin-top: -30px;
+  background-color: #f6f6f6;
+}
+
+body main .wrapdiv .intro__titlediv .titleicon {
+  margin-left: auto;
+}
+
+body main .wrapdiv .entrees {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body main .wrapdiv .meal {
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+body main .wrapdiv .delicacy {
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body main .wrapdiv .delicacy > div {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main .wrapdiv .delicacy .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 80%;
+  padding: 2% 1% 2% 3%;
+}
+
+body main .wrapdiv .delicacy .menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  width: 100%;
+  font-size: 13px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body main .wrapdiv .delicacy .menu__ingredient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 300;
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  font-size: 12px;
+}
+
+body main .wrapdiv .delicacy .menu__ingredient .cost {
+  font-weight: bold;
+  margin-left: auto;
+}
+
+body main .wrapdiv .delicacy .hiddenx {
+  display: none;
+}
+
+body main .wrapdiv .delicacy .menu:hover + .hiddenx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+  width: 20%;
+  margin-left: auto;
+}
+
+body main .wrapdiv .delicacy i {
+  font: #99E2D0;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+
+body main .wrapdiv .maindish {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .wrapdiv .desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .wrapdiv .order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FF79DA;
+  width: 50%;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+/*# sourceMappingURL=main.css.map */
