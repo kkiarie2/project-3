@@ -1,15 +1,26 @@
-
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
-$background-grey: #e5e4e2;
-$background-grey-dark: #c0c0c0;
+$backgrey: #e5e4e2;
+$darkgrey: #c0c0c0;
 $footer-background: #000000;
 $footer-font-color: #FFFFFF;
 $mobile-width: 480px;
 $tablet: 768px;
 $font-logo: 'Shrikhand', cursive;
 $font-text: 'Roboto', sans-serif;
+$descriptionbackground: white;
+$fonttype-light: 300;
+$bastillebackground: #f6f6f6;
+$shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 
 
+@mixin flexsetting ($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    
+
+}

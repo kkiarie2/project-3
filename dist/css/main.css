@@ -1,4 +1,9 @@
-.headerdiv {
+body {
+  margin: 0 5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body .headerdiv {
   font-family: "Shrikhand", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,11 +11,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  width: 90%;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+body section {
+  width: 90%;
 }
 
 body .information {
@@ -23,7 +28,7 @@ body .information {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -36,7 +41,12 @@ body .information .top {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #e5e4e2;
   width: 100%;
   margin: 10px 0;
@@ -125,7 +135,10 @@ body .information .process__instructions .steps {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -134,11 +147,29 @@ body .information .process__instructions .steps {
   border-radius: 15px;
 }
 
-body .information .process__instructions .steps i {
+body .information .process__instructions .steps .number {
+  line-height: 10px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #FF79DA;
+  font-size: 10px;
+  vertical-align: middle;
+  text-align: center;
+  position: absolute;
+  margin-left: 0;
+  margin-right: auto;
+  -webkit-transform: translate(-30%);
+          transform: translate(-30%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .information .process__instructions .steps .number i {
   margin-right: auto;
   text-justify: middle;
   text-align: center;
-  line-height: 20px;
+  line-height: 8px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -152,27 +183,43 @@ body .information .process__instructions .steps i {
   align-self: center;
 }
 
-body .information .process__instructions .steps #one, body .information .process__instructions .steps #two, body .information .process__instructions .steps #three {
-  line-height: 10px;
-  border-radius: 50%;
-  padding: 10px;
-  background-color: #FF79DA;
-  font-size: 10px;
-  vertical-align: middle;
-  text-align: center;
-  position: absolute;
-  margin-left: 0;
-  margin-right: 20px;
-  -webkit-transform: translate(-30%);
-          transform: translate(-30%);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+body .information .process__instructions .steps .object {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
 }
 
-body .information .process__instructions .steps p {
-  margin-right: auto;
-  font-size: 12px;
+body .information .process__instructions .steps .todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+body .information .process__instructions .steps .todo p {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 body .restaurants {
@@ -187,7 +234,7 @@ body .restaurants {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #e5e4e2;
-  width: 100%;
+  width: 80%;
 }
 
 body .restaurants > div {
@@ -225,6 +272,7 @@ body .restaurants__available .options {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 90%;
+  height: auto;
   margin: 15px auto;
   border-radius: 25px;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -236,45 +284,97 @@ body .restaurants__available .options__picture {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 60%;
 }
 
 body .restaurants__available .options__picture img {
   width: 100%;
-  height: 200px;
+  height: 150px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 body .restaurants__available .options__description {
-  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background-color: white;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .restaurants__available .options__description .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-weight: bold;
+  width: 60%;
+  margin: 0;
 }
 
-body .restaurants__available .options__description .city {
+body .restaurants__available .options__description .name p {
+  margin: 0;
+}
+
+body .restaurants__available .options__description .name .city {
   font-weight: 300;
+  margin: 0;
+}
+
+body .restaurants__available .options__description .name .city p {
+  margin: 0;
+}
+
+body .restaurants__available .options__description .heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  width: 30%;
+  font-size: 1.5rem;
 }
 
 body .footerdiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #000000;
-  color: #FFFFFF;
   bottom: 0;
+  color: #FFFFFF;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  width: 80%;
 }
 
 body .footerdiv__title {
@@ -424,8 +524,12 @@ body main .wrapdiv .delicacy .menu {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  width: 100%;
+  padding: 2% 5% 2% 5%;
+}
+
+body main .wrapdiv .delicacy .menu .menu:hover {
   width: 80%;
-  padding: 2% 1% 2% 3%;
 }
 
 body main .wrapdiv .delicacy .menu__item {
@@ -516,5 +620,6 @@ body main .wrapdiv .order {
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 10px 0;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=main.css.map */
