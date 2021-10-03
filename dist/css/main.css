@@ -1,6 +1,20 @@
 body {
-  margin: 0 5%;
+  margin: 0 2%;
   font-family: "Roboto", sans-serif;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+body div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 769px) {
+  body {
+    margin: 0 4px;
+  }
 }
 
 body .headerdiv {
@@ -11,11 +25,17 @@ body .headerdiv {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90%;
+  width: 98%;
 }
 
-body section {
-  width: 90%;
+body main {
+  width: 98%;
+}
+
+@media (min-width: 769px) {
+  body main {
+    width: 100%;
+  }
 }
 
 body .information {
@@ -28,9 +48,27 @@ body .information {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media only screen and (max-width: 576px) and (min-width: 481px) {
+  body .information {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body .information {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 body .information .top {
@@ -49,31 +87,35 @@ body .information .top {
           align-items: center;
   background-color: #e5e4e2;
   width: 100%;
-  margin: 10px 0;
-  padding: 10px 0;
-}
-
-body .information .top > div {
-  margin: 0 auto;
+  font-weight: 500;
+  color: black;
+  font-size: 1rem;
 }
 
 body .information .top__paris {
+  background-color: #c0c0c0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #c0c0c0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: auto;
   width: 100%;
+  color: black;
 }
 
 body .information .top__paris i {
   margin-right: 10px;
   text-align: center;
   vertical-align: middle;
-  line-height: 45px;
 }
 
 body .information .top__explore {
@@ -83,11 +125,36 @@ body .information .top__explore {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #FF79DA;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
   width: 70%;
   border-radius: 30px;
   margin: 0 auto;
   margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 576px) and (min-width: 481px) {
+  body .information .top__explore {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body .information .top__explore {
+    width: 30%;
+  }
+}
+
+@media (min-width: 769px) {
+  body .information .top__explore {
+    width: 230.6px;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
 }
 
 body .information .top p {
@@ -106,7 +173,14 @@ body .information .process {
   margin: 20px 0;
 }
 
-body .information .process > div {
+body .information .process__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body .information .process__instructions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,14 +188,34 @@ body .information .process > div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .information .process__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body .information .process__instructions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 769px) {
+  body .information .process__instructions {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 body .information .process__instructions .steps {
@@ -145,6 +239,24 @@ body .information .process__instructions .steps {
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
+}
+
+@media only screen and (max-width: 576px) and (min-width: 481px) {
+  body .information .process__instructions .steps {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body .information .process__instructions .steps {
+    width: 40%;
+  }
+}
+
+@media (min-width: 769px) {
+  body .information .process__instructions .steps {
+    width: 304px;
+  }
 }
 
 body .information .process__instructions .steps .number {
@@ -234,17 +346,7 @@ body .restaurants {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #e5e4e2;
-  width: 80%;
-}
-
-body .restaurants > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  width: 100%;
 }
 
 body .restaurants__title {
@@ -252,13 +354,58 @@ body .restaurants__title {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 body .restaurants__available {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
+}
+
+@media only screen and (max-width: 576px) and (min-width: 481px) {
+  body .restaurants__available {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body .restaurants__available {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (min-width: 769px) {
+  body .restaurants__available {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 body .restaurants__available .options {
@@ -271,12 +418,32 @@ body .restaurants__available .options {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 90%;
+  width: 276.587px;
   height: auto;
   margin: 15px auto;
   border-radius: 25px;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media only screen and (max-width: 576px) and (min-width: 481px) {
+  body .restaurants__available .options {
+    width: 40%;
+    margin: 15px 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body .restaurants__available .options {
+    width: 269px;
+  }
+}
+
+@media (min-width: 769px) {
+  body .restaurants__available .options {
+    width: 20%;
+    max-width: 290px;
+  }
 }
 
 body .restaurants__available .options__picture {
@@ -291,6 +458,19 @@ body .restaurants__available .options__picture img {
   height: 150px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body .restaurants__available .options__picture img {
+    width: 269px;
+  }
+}
+
+@media (min-width: 769px) {
+  body .restaurants__available .options__picture img {
+    max-height: 150px;
+    max-width: 300px;
+  }
 }
 
 body .restaurants__available .options__description {
@@ -332,6 +512,7 @@ body .restaurants__available .options__description .name {
   font-weight: bold;
   width: 60%;
   margin: 0;
+  padding-left: 1rem;
 }
 
 body .restaurants__available .options__description .name p {
@@ -361,6 +542,23 @@ body .restaurants__available .options__description .heart {
   font-size: 1.5rem;
 }
 
+body #far {
+  display: block;
+}
+
+body #far:hover + .options__description {
+  display: none;
+}
+
+body #solid {
+  display: none;
+}
+
+body #solid:hover + #far {
+  display: block;
+  color: #FF79DA;
+}
+
 body .footerdiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,7 +572,13 @@ body .footerdiv {
   color: #FFFFFF;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 80%;
+  width: 98%;
+}
+
+@media (min-width: 769px) {
+  body .footerdiv {
+    width: 100%;
+  }
 }
 
 body .footerdiv__title {
@@ -387,22 +591,97 @@ body .footerdiv__title {
   padding-bottom: 0;
 }
 
-body .footerdiv ul li {
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body .footerdiv__title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 769px) {
+  body .footerdiv__title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 24px;
+  }
+}
+
+body .footerdiv__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body .footerdiv__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-width: 769px) {
+  body .footerdiv__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body .footerdiv__list ul li {
   list-style-type: none;
   width: 100%;
   line-height: 20px;
   margin: 5px 0;
-  display: inline;
 }
 
-body .footerdiv ul li a {
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body .footerdiv__list ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  body .footerdiv__list ul li {
+    display: inline;
+    padding: 0 20px;
+    margin-right: 20px;
+  }
+}
+
+body .footerdiv__list ul li a {
   text-decoration: none;
   color: #FFFFFF;
-  list-style-type: none;
 }
 
 body {
-  margin: 0 5px;
+  margin: 0 2%;
+  width: 98%;
 }
 
 body h1 {
@@ -421,7 +700,7 @@ body main .wrapdiv {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 90%;
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -461,6 +740,16 @@ body main .wrapdiv .intro__titlediv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   width: 100%;
@@ -468,8 +757,43 @@ body main .wrapdiv .intro__titlediv {
   background-color: #f6f6f6;
 }
 
+body main .wrapdiv .intro__titlediv .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
 body main .wrapdiv .intro__titlediv .titleicon {
-  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+}
+
+body main .wrapdiv .intro__titlediv .titleicon i {
+  font-weight: 100;
 }
 
 body main .wrapdiv .entrees {
@@ -488,6 +812,31 @@ body main .wrapdiv .entrees {
 body main .wrapdiv .meal {
   font-weight: 300;
   margin-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+@media only screen and (max-width: 576px) and (min-width: 481px) {
+  body main .wrapdiv .meal {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body main .wrapdiv .meal {
+    font-size: 20px;
+  }
+}
+
+body main .wrapdiv .meal::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10%;
+  height: 3px;
+  border-bottom: 3px solid #99E2D0;
 }
 
 body main .wrapdiv .delicacy {
@@ -497,8 +846,8 @@ body main .wrapdiv .delicacy {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  margin: 10px 0;
+  width: 94%;
+  margin: 10px 3%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -544,6 +893,18 @@ body main .wrapdiv .delicacy .menu__item {
           align-items: flex-start;
 }
 
+@media only screen and (max-width: 576px) and (min-width: 481px) {
+  body main .wrapdiv .delicacy .menu__item {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body main .wrapdiv .delicacy .menu__item {
+    font-size: 18px;
+  }
+}
+
 body main .wrapdiv .delicacy .menu__ingredient {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -553,6 +914,18 @@ body main .wrapdiv .delicacy .menu__ingredient {
   height: auto;
   margin-left: 0;
   font-size: 12px;
+}
+
+@media only screen and (max-width: 576px) and (min-width: 481px) {
+  body main .wrapdiv .delicacy .menu__ingredient {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  body main .wrapdiv .delicacy .menu__ingredient {
+    font-size: 16px;
+  }
 }
 
 body main .wrapdiv .delicacy .menu__ingredient .cost {
@@ -611,11 +984,25 @@ body main .wrapdiv .order {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #FF79DA;
-  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+  width: 153.55px;
+  height: 19.2px;
   border-radius: 30px;
   margin: 0 auto;
   margin-bottom: 20px;

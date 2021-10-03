@@ -8,11 +8,15 @@ $tertiary-color: #99E2D0;
 $backgrey: #e5e4e2;
 $darkgrey: #c0c0c0;
 $footer-background: #000000;
+$text-color: black;
 $footer-font-color: #FFFFFF;
 $mobile-width: 480px;
-$tablet: 768px;
+$desktop: 769px;
 $font-logo: 'Shrikhand', cursive;
 $font-text: 'Roboto', sans-serif;
+$regular: 500;
+$bold: 700;
+$black: 900;
 $descriptionbackground: white;
 $fonttype-light: 300;
 $bastillebackground: #f6f6f6;
@@ -21,10 +25,11 @@ $shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 
 
-@mixin menufont ($fontfamily, $font-weight, $fontsize: 20px) {
-    font-size: $fontsize;
-    font-family: $fontfamily;
+@mixin font ( $font-weight, $color: black, $fontsize: 1.2rem) {
+    
     font-weight: $font-weight;
+    color: $color;
+    font-size: $fontsize;
 }
 
 
@@ -38,10 +43,41 @@ $shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 
+@mixin smalltablet {
+    @media only screen and (max-width: 576px) and (min-width: 481px)  {
+       @content; 
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: 768px) and (min-width: 577px)  {
+       @content; 
+    }
+}
+
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+       @content; 
+    }
+}
+
+
+
 
 body{
+    margin: 0 2%;
+    font-family: $font-text;
+    color: $text-color;
 
-    margin: 0 5%;
+    div {
+        display: flex;
+    }
+
+    @include desktop {
+        margin: 0 4px;
+    }
+    
     font-family: $font-text;
 
 
@@ -49,14 +85,20 @@ body{
         font-family: $font-logo;
         display: flex;
         justify-content: center;
-        width: 90%;
+        width: 98%;
         
         
     }
 
-    section {
-        width: 90%;
+    main{
+        width: 98%;
+
+        @include desktop {
+            width: 100%;
+        }
     }
+
+  
 
    
 
@@ -71,50 +113,71 @@ body{
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            width: 90%;
+            width: 100%;
            
+            @include smalltablet{
+                flex-direction: row;
+
+            }
+            @include tablet{
+                flex-direction: row;
+
+            }
 
                  
             .top{
                 @include flexsetting(column, center, center);
                 background-color: $backgrey;
                 width: 100%;
-                margin: 10px 0;
-                padding: 10px 0;
+                @include font( $regular, $text-color ,1rem );
                 
-                > div {
-                
-                    margin: 0 auto;
-                }
+
 
                     &__paris {
-                        display: flex;
                         background-color: $darkgrey;
-                        justify-content: center;
+                        @include flexsetting(row, center, center);
                         margin-left: auto;
                         width: 100%;
+                        color: $text-color;
 
                         i {
                             margin-right: 10px;
                             text-align: center;
                             vertical-align: middle;
-                            line-height: 45px;
                         }
                     }
 
                     &__explore {
                         display: flex;
                         justify-content: center;
-                        background-color: $secondary-color;
+                        background-image: linear-gradient(180deg, $secondary-color, $primary-color); 
                         width: 70%;
                         border-radius: 30px;
                         margin: 0 auto;
                         margin-bottom: 20px;
+                        color: $footer-font-color;
+                        
+
+                        @include smalltablet{
+                            width: 40%;
+
+                        }
+                        
+                        @include tablet {
+                            width: 30%;
+                        }
+
+                        @include desktop {
+                            width: 230.6px;
+                            flex-grow: 0;
+                            flex-basis: auto;
+                        }
 
                     }
 
                     p {
                         text-align: center;
+                        
                     }
             }
 
@@ -126,12 +189,7 @@ body{
             margin: 20px 0;
 
 
-            > div {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
 
-            }
 
 
 
@@ -144,8 +202,19 @@ body{
 
          
                 &__instructions {
+                    @include flexsetting(column, flex-start , center);
 
 
+                    @include tablet {
+                    
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+
+                    @include desktop {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
 
             
                     .steps {
@@ -157,6 +226,21 @@ body{
                         margin-top: 20px;
                         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                         border-radius: 15px;
+
+                        @include smalltablet{
+                            width: 60%;
+
+                        }
+
+
+                        @include tablet {
+                            width: 40%;
+                        }
+
+                        @include desktop{
+                            width: 304px;
+                            
+                        }
                         
 
 
@@ -246,33 +330,78 @@ body{
                  flex-direction: column;
                  justify-content: center;
                  background-color: $backgrey;
-                 width: 80%;
+                 width: 100%;
 
-                 > div {
-                     display: flex;
-                     flex-direction: column;
-                 }
+                 
+
+
 
                  &__title {
                      display: flex;
                      width: 100%;
+                     margin-bottom: 2rem;
                  }
 
 
                  &__available {
                                 display: flex;
+                                flex-direction: column;
                                 width: 100%;
+
+                                @include smalltablet{
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+        
+                                }
+
+                                @include tablet{
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    justify-content: space-around;
+                                
+                                    
+                                    
+                                }
+
+                                @include desktop{
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    justify-content: space-around;
+                                        
+                                    }
      
      
                                 .options{
                                     display: flex;
                                     flex-direction: column;
                                     flex-wrap: wrap;
-                                    width: 90%;
+                                    width: 276.587px;
                                     height: auto;
                                     margin: 15px auto;
                                     border-radius: 25px;
                                     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+                                    @include smalltablet{
+                                        width: 40%;
+                                        margin: 15px 20px;
+                                            
+                                        }
+
+
+
+                                    @include tablet{
+                                    width: 269px;
+                                        
+                                    }
+
+                                    @include desktop{
+                                        width: 20%;
+                                        max-width: 290px;
+                                            
+                                        }
+
+                                    
                                 
                         
                                     &__picture {
@@ -284,6 +413,22 @@ body{
                                                     height: 150px;
                                                     border-top-left-radius: 20px;
                                                     border-top-right-radius: 20px;
+
+
+                                                    @include tablet{
+                                                        width: 269px;
+                                                        
+                                                            
+                                                        }
+
+                                                        @include desktop {
+                                                            
+                                                            max-height: 150px;
+                                                            max-width: 300px;
+                                                            
+                                                            
+                                                                
+                                                            }
                                                     
                                             }
                                     }
@@ -302,6 +447,7 @@ body{
                                             font-weight: bold;
                                              width: 60%;
                                              margin: 0;
+                                             padding-left: 1rem;
 
                                              p {
                                                 margin: 0;
@@ -328,6 +474,15 @@ body{
                                             margin-left: auto;
                                             width: 30%;
                                             font-size: 1.5rem;
+
+                                            
+
+                                                    
+                                               
+
+                                               
+                                            
+                                            
                                         }
                                         
                                     }
@@ -337,7 +492,35 @@ body{
                 }
         }
 
+        #far {
+            display: block;
+            
+            
+            
+            
+
+
+            &:hover + .options__description{
+                display: none;
+                
+            }
+
         
+        }
+
+        #solid {
+            
+
+            display: none;
+
+            &:hover + #far{
+                display: block;
+                color: $secondary-color;
+                
+                
+                
+            }
+        }
 
      
          
@@ -354,7 +537,11 @@ body{
     bottom: 0;
     color: $footer-font-color;
     flex-wrap: nowrap;
-    width: 80%;
+    width: 98%;
+
+    @include desktop {
+        width: 100%;
+    }
 
        
 
@@ -367,30 +554,75 @@ body{
                 padding-left: 40px;
                 font-size: 20px;
                 padding-bottom: 0;
+
+                @include tablet{
+                   justify-content: center;
+                   font-size: 24px;
+                }
+                @include desktop {
+                    justify-content: center;
+                    font-size: 24px; 
+                }
     
         
       }
-      ul {
 
-      
-        li {
-         
-            list-style-type: none;
-            width: 100%;
-            line-height: 20px;
-            margin: 5px 0;
-            display: inline;
-            
-            
+            &__list {
 
-            a {
-                         
-             text-decoration: none;
-             color: $footer-font-color;
-             list-style-type: none;
-         }
-     }
+                        @include flexsetting (column, flex-start, flex-start); 
 
+                        @include tablet{
+                            
+                            flex-direction: row;
+                            align-items: flex-start;
+                            
+                            
+                        }
+                        @include desktop {
+                            
+                            flex-direction: row;
+                            align-items: flex-start;
+                            justify-content: center;
+                            
+                            
+                        }
+
+                    ul {
+
+                    
+                            li {
+                        
+                                list-style-type: none;
+                                width: 100%;
+                                line-height: 20px;
+                                margin: 5px 0;
+
+
+                                @include tablet {
+                                    display: inline;
+                                    margin-left: 20px;
+                                }
+
+                                @include desktop {
+                                    display: inline;
+                                    padding: 0 20px;
+                                    margin-right: 20px;
+                                }
+                            
+                            
+
+                                    a {
+                                                
+                                    text-decoration: none;
+                                    color: $footer-font-color;
+                                    
+                                    }
+
+
+                                   
+                            }
+
+                        }
     }
 
      
@@ -407,7 +639,8 @@ body{
  body{
     h1 {
         font-family: $font-logo;}
-        margin: 0 5px;
+        margin: 0 2%;
+        width: 98%;
         
         
     main{
@@ -418,7 +651,7 @@ body{
         .wrapdiv {
             display: flex;
               flex-direction: column;
-              width: 90%;
+              width: 100%;
               justify-content: center;
               margin-left: auto;
               margin-right: auto;
@@ -447,7 +680,7 @@ body{
                                 }
 
                                 &__titlediv {
-                                    display: flex;
+                                    @include flexsetting(row, center, center);
                                     border-top-left-radius: 20px;
                                     border-top-right-radius: 20px;
                                     width: 100%;
@@ -455,9 +688,26 @@ body{
                                     background-color: $bastillebackground;
 
 
+                                    .title {
+                                        @include flexsetting(row, flex-start, center);
+                                        width: 80%;
+                                    }
+
+
+
 
                                     .titleicon {
-                                        margin-left: auto;
+                                        @include flexsetting(row, center, center);
+                                        font-family: $font-text;
+                                        font-size: 1.5rem;
+
+
+                                        i {
+                                            
+                                        font-weight: 100;
+                                        }
+
+                                        
                                     }
 
 
@@ -492,7 +742,36 @@ body{
 
                                 font-weight: $fonttype-light;
                                 margin-top: 20px;
-                             }
+                                margin-bottom: 10px;
+                                padding-bottom: 10px;
+                                position: relative;
+
+
+                                @include smalltablet {
+                                    font-size: 16px;
+                                }
+
+
+                                @include tablet {
+                                    font-size: 20px;
+                                }
+                                     
+
+                                
+                            
+                                }
+
+            .meal::before {
+                content:"";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 10%;
+                height: 3px;
+                border-bottom: 3px solid $tertiary-color;
+
+
+            }
 
 
 
@@ -503,8 +782,8 @@ body{
                              box-shadow: $shadowsetting;
                              border-radius: 20px;
                              display: flex;
-                              width: 100%;
-                              margin: 10px 0;
+                              width: 94%;
+                              margin: 10px 3%;
                               justify-content: flex-start;
                               margin-left: auto;
                               margin-right: auto;
@@ -537,6 +816,14 @@ body{
                                                 font-size: 13px;
                                                 align-items: flex-start;
 
+                                                @include smalltablet {
+                                                    font-size: 15px;
+                                                }
+
+                                                @include tablet {
+                                                    font-size: 18px;
+                                                }
+
 
                                         }
 
@@ -547,6 +834,13 @@ body{
                                             height: auto;
                                             margin-left: 0;
                                             font-size: 12px;
+                                            @include smalltablet {
+                                                font-size: 14px;
+                                            }
+
+                                            @include tablet {
+                                                font-size: 16px;
+                                            }
 
 
                                             .cost{
@@ -624,10 +918,12 @@ body{
 
                 .order {
 
-                    display: flex;
-                    justify-content: center;
-                    background-color: $secondary-color;
-                    width: 50%;
+                    @include flexsetting(row, center, center);
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    background-image: linear-gradient(180deg, $secondary-color, $primary-color);
+                    width: 153.55px;
+                    height: 19.2px;
                     border-radius: 30px;
                     margin: 0 auto;
                     margin-bottom: 20px;
