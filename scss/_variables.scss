@@ -4,16 +4,29 @@ $tertiary-color: #99E2D0;
 $backgrey: #e5e4e2;
 $darkgrey: #c0c0c0;
 $footer-background: #000000;
+$text-color: black;
 $footer-font-color: #FFFFFF;
 $mobile-width: 480px;
-$tablet: 768px;
+$desktop: 769px;
 $font-logo: 'Shrikhand', cursive;
 $font-text: 'Roboto', sans-serif;
+$regular: 500;
+$bold: 700;
+$black: 900;
 $descriptionbackground: white;
 $fonttype-light: 300;
 $bastillebackground: #f6f6f6;
 $shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
+
+
+
+@mixin font ( $font-weight, $color: black, $fontsize: 1.2rem) {
+    
+    font-weight: $font-weight;
+    color: $color;
+    font-size: $fontsize;
+}
 
 
 @mixin flexsetting ($direction, $justify, $align){
@@ -23,4 +36,24 @@ $shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     align-items: $align;
     
 
+}
+
+
+@mixin smalltablet {
+    @media only screen and (max-width: 576px) and (min-width: 481px)  {
+       @content; 
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: 768px) and (min-width: 577px)  {
+       @content; 
+    }
+}
+
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+       @content; 
+    }
 }

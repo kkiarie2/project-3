@@ -1,66 +1,8 @@
 
+@import './variables';
+@import './bastille';
 
 
-
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$backgrey: #e5e4e2;
-$darkgrey: #c0c0c0;
-$footer-background: #000000;
-$text-color: black;
-$footer-font-color: #FFFFFF;
-$mobile-width: 480px;
-$desktop: 769px;
-$font-logo: 'Shrikhand', cursive;
-$font-text: 'Roboto', sans-serif;
-$regular: 500;
-$bold: 700;
-$black: 900;
-$descriptionbackground: white;
-$fonttype-light: 300;
-$bastillebackground: #f6f6f6;
-$shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
-
-
-
-@mixin font ( $font-weight, $color: black, $fontsize: 1.2rem) {
-    
-    font-weight: $font-weight;
-    color: $color;
-    font-size: $fontsize;
-}
-
-
-@mixin flexsetting ($direction, $justify, $align){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-    
-
-}
-
-
-@mixin smalltablet {
-    @media only screen and (max-width: 576px) and (min-width: 481px)  {
-       @content; 
-    }
-}
-
-@mixin tablet {
-    @media only screen and (max-width: 768px) and (min-width: 577px)  {
-       @content; 
-    }
-}
-
-
-@mixin desktop {
-    @media (min-width: $desktop) {
-       @content; 
-    }
-}
 
 
 
@@ -70,9 +12,7 @@ body{
     font-family: $font-text;
     color: $text-color;
 
-    div {
-        display: flex;
-    }
+
 
     @include desktop {
         margin: 0 4px;
@@ -251,7 +191,7 @@ body{
                             line-height: 10px;
                             border-radius: 50%;
                             padding: 10px;
-                            background-color: $secondary-color;
+                            background-color: $primary-color;
                             font-size: 10px;
                             vertical-align: middle;
                             text-align: center;
@@ -381,6 +321,7 @@ body{
                                     margin: 15px auto;
                                     border-radius: 25px;
                                     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                                    position: relative;
 
                                     @include smalltablet{
                                         width: 40%;
@@ -474,53 +415,68 @@ body{
                                             margin-left: auto;
                                             width: 30%;
                                             font-size: 1.5rem;
+                                            position: relative;
 
-                                            
+
+                                            #far {
+                                                display: block;
+                                                color: black;
+                                                position: relative;
+                                                
+                                                
+                                            }
+
+                                            #solid {
+                                                display: none;
+                                                color: $primary-color;
+                                                position: relative;
+                                                left: 0;
+                                                top: 0;
+                                                z-index: 99;
+
+
+
+
+                                            }
+
+
+
+ 
 
                                                     
-                                               
+
 
                                                
                                             
                                             
                                         }
+
+ 
                                         
                                     }
+
+                                    &:hover #solid{
+
+                                        display: flex;
+                                       
+                                        
+                                    } 
+                                    &:hover #far{
+
+                                        display: none;
+                                       
+                                        
+                                    } 
+
+
      
                         }
      
                 }
         }
 
-        #far {
-            display: block;
-            
-            
-            
-            
+       
 
-
-            &:hover + .options__description{
-                display: none;
-                
-            }
-
-        
-        }
-
-        #solid {
-            
-
-            display: none;
-
-            &:hover + #far{
-                display: block;
-                color: $secondary-color;
-                
-                
-                
-            }
-        }
 
      
          
@@ -529,7 +485,12 @@ body{
 
 
 
-    .footerdiv{
+
+
+
+}
+
+.footerdiv{
              
     display: flex;
     flex-direction: column;
@@ -596,6 +557,7 @@ body{
                                 width: 100%;
                                 line-height: 20px;
                                 margin: 5px 0;
+                                color: $footer-font-color;
 
 
                                 @include tablet {
@@ -629,94 +591,118 @@ body{
  }
 
 
-}
 
 
 
 // page 2 menu code
 
 
- body{
-    h1 {
-        font-family: $font-logo;}
-        margin: 0 2%;
-        width: 98%;
+//  body{
+//     h1 {
+//         font-family: $font-logo;}
+//         margin: 0 2%;
+//         width: 98%;
         
         
-    main{
-        background-color: $bastillebackground;
+//     main{
+//         background-color: $bastillebackground;
         
         
 
-        .wrapdiv {
-            display: flex;
-              flex-direction: column;
-              width: 100%;
-              justify-content: center;
-              margin-left: auto;
-              margin-right: auto;
+//         .wrapdiv {
+//             display: flex;
+//               flex-direction: column;
+//               width: 100%;
+//               justify-content: center;
+//               margin-left: auto;
+//               margin-right: auto;
+
+//               @include desktop {
+//                 width: 80%;
+//             }
                                
               
 
            
 
-             .intro {
-                                display: flex;
-                                flex-direction: column;
-                                width: 100%;
-                                margin-left: auto;
-                                margin-right: auto;
+//              .intro {
+//                                 display: flex;
+//                                 flex-direction: column;
+//                                 width: 100%;
+//                                 margin-left: auto;
+//                                 margin-right: auto;
                 
                                 
-                               &__topimage {
+//                                &__topimage {
 
-                                    display: flex;
-                                    flex-direction: column;
-                                    width: 100%;
+//                                     display: flex;
+//                                     flex-direction: column;
+                                    
+//                                     width: 100%;
+                                    
+//                                     @include desktop {
+//                                         display: flex;
+//                                         display: row;
+//                                         align-items: center;
+//                                         width: auto;
+//                                         }
+//                                     }
+//                                     img {
+//                                         width: 100%;
 
-                                    img {
-                                        width: 100%;
-                                    }
-                                }
+//                                         @include desktop {
+//                                             width: 1000px;
+//                                             height: 400px;
+//                                         }
+//                                     }
+//                                 }
 
-                                &__titlediv {
-                                    @include flexsetting(row, center, center);
-                                    border-top-left-radius: 20px;
-                                    border-top-right-radius: 20px;
-                                    width: 100%;
-                                    margin-top: -30px;
-                                    background-color: $bastillebackground;
-
-
-                                    .title {
-                                        @include flexsetting(row, flex-start, center);
-                                        width: 80%;
-                                    }
+//                                 &__titlediv {
+//                                     @include flexsetting(row, center, center);
+//                                     border-top-left-radius: 20px;
+//                                     border-top-right-radius: 20px;
+//                                     width: 100%;
+//                                     margin-top: -30px;
+//                                     background-color: $bastillebackground;
 
 
 
 
-                                    .titleicon {
-                                        @include flexsetting(row, center, center);
-                                        font-family: $font-text;
-                                        font-size: 1.5rem;
+//                                     @include desktop {
+//                                         width: 700px;
+//                                     }
+                                    
 
 
-                                        i {
+//                                     .title {
+//                                         @include flexsetting(row, flex-start, center);
+//                                         width: 80%;
+//                                     }
+
+
+
+
+//                                     .titleicon {
+//                                         @include flexsetting(row, center, center);
+//                                         font-family: $font-text;
+//                                         font-size: 1.5rem;
+
+
+//                                         i {
                                             
-                                        font-weight: 100;
-                                        }
+//                                         font-weight: 100;
+//                                         }
 
                                         
-                                    }
+//                                     }
 
 
 
 
 
-                                }
+//                                 }
 
-                 }
+//                  }
 
 
                                
@@ -726,172 +712,213 @@ body{
 
 
 
-                            .entrees  {
+//                             .entrees  {
 
-                                display: flex;
-                                width: 100%;
-                                flex-direction: column;
-                                margin-left: auto;
-                                margin-right: auto;
-
-                            }
+//                                 display: flex;
+//                                 width: 100%;
+//                                 flex-direction: column;
+//                                 margin-left: auto;
+//                                 margin-right: auto;
 
 
+//                                 @include desktop {
+//                                     width: 40%;
+//                                     margin-left: 0;
+//                                     margin-right: auto;
 
-             .meal {
+//                                 }
 
-                                font-weight: $fonttype-light;
-                                margin-top: 20px;
-                                margin-bottom: 10px;
-                                padding-bottom: 10px;
-                                position: relative;
-
-
-                                @include smalltablet {
-                                    font-size: 16px;
-                                }
+//                             }
 
 
-                                @include tablet {
-                                    font-size: 20px;
-                                }
+
+//              .meal {
+
+//                                 font-weight: $fonttype-light;
+//                                 margin-top: 20px;
+//                                 margin-bottom: 10px;
+//                                 padding-bottom: 10px;
+//                                 position: relative;
+
+
+//                                 @include smalltablet {
+//                                     font-size: 16px;
+//                                 }
+
+
+//                                 @include tablet {
+//                                     font-size: 20px;
+//                                 }
+
+//                                 @include desktop {
+//                                     font-size: 22px;
+//                                     margin-left: 20%;
+//                                     width: 40%;
+//                                 }
                                      
 
                                 
                             
-                                }
+//                                 }
 
-            .meal::before {
-                content:"";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 10%;
-                height: 3px;
-                border-bottom: 3px solid $tertiary-color;
-
-
-            }
+//             .meal::before {
+//                 content:"";
+//                 position: absolute;
+//                 bottom: 0;
+//                 left: 0;
+//                 width: 10%;
+//                 height: 3px;
+//                 border-bottom: 3px solid $tertiary-color;
 
 
+//             }
 
 
 
-             .delicacy {
-
-                             box-shadow: $shadowsetting;
-                             border-radius: 20px;
-                             display: flex;
-                              width: 94%;
-                              margin: 10px 3%;
-                              justify-content: flex-start;
-                              margin-left: auto;
-                              margin-right: auto;
 
 
-                                    > div {
-                                        flex-direction: row;
-                                    }
+//              .delicacy {
 
-                                    .menu{
+//                              box-shadow: $shadowsetting;
+//                              border-radius: 20px;
+//                              display: flex;
+//                               width: 94%;
+//                               margin: 10px 3%;
+//                               justify-content: flex-start;
+//                               margin-left: auto;
+//                               margin-right: auto;
+
+
+//                               @include desktop {
+//                                 width: 100%;
+//                                 margin-left: auto;
+//                                 margin-right: auto;
+//                                 padding-top: 0;
+//                                 padding-bottom: 0;
+//                             }
+
+
+//                                     > div {
+//                                         flex-direction: row;
+//                                     }
+
+//                                     .menu{
                                                 
 
-                                        display: flex;
-                                        flex-direction: column;
-                                        justify-content: flex-start;
-                                        width: 100%;
-                                        padding: 2% 5% 2% 5%;
+//                                         display: flex;
+//                                         flex-direction: column;
+//                                         justify-content: flex-start;
+//                                         width: 100%;
+//                                         padding: 2% 5% 2% 5%;
 
-                                        .menu:hover {
-                                            width: 80%;
-                                        }
-
-
+//                                         .menu:hover {
+//                                             width: 80%;
+//                                         }
 
 
-                                        &__item{
-                                                display: flex;
-                                                font-weight: 700; 
-                                                width: 100%;
-                                                font-size: 13px;
-                                                align-items: flex-start;
-
-                                                @include smalltablet {
-                                                    font-size: 15px;
-                                                }
-
-                                                @include tablet {
-                                                    font-size: 18px;
-                                                }
-
-
-                                        }
-
-                                        &__ingredient {
-                                            display: flex;
-                                            font-weight: $fonttype-light;
-                                            width: 100%;
-                                            height: auto;
-                                            margin-left: 0;
-                                            font-size: 12px;
-                                            @include smalltablet {
-                                                font-size: 14px;
-                                            }
-
-                                            @include tablet {
-                                                font-size: 16px;
-                                            }
-
-
-                                            .cost{
-                                                font-weight: bold;
-                                                margin-left: auto;
-                                            }
-                                        }
+//                                         @include desktop {
+//                                             padding-top: 0;
+//                                             padding-bottom: 0;
+//                                             width: 462.36px;
+//                                         }
 
 
 
-                                    }
 
-                                    .hiddenx {
 
-                                        display: none;
+
+//                                         &__item{
+//                                                 display: flex;
+//                                                 font-weight: 700; 
+//                                                 width: 100%;
+//                                                 font-size: 13px;
+//                                                 align-items: flex-start;
+
+//                                                 @include smalltablet {
+//                                                     font-size: 15px;
+//                                                 }
+
+//                                                 @include tablet {
+//                                                     font-size: 18px;
+//                                                 }
+
+//                                                 @include desktop {
+//                                                     font-size: 20px;
+//                                                 }
+
+
+//                                         }
+
+//                                         &__ingredient {
+//                                             display: flex;
+//                                             font-weight: $fonttype-light;
+//                                             width: 100%;
+//                                             height: auto;
+//                                             margin-left: 0;
+//                                             font-size: 12px;
+//                                             @include smalltablet {
+//                                                 font-size: 14px;
+//                                             }
+
+//                                             @include tablet {
+//                                                 font-size: 16px;
+//                                             }
+
+
+//                                             @include desktop {
+//                                                 font-size: 18px;
+//                                             }
+
+
+//                                             .cost{
+//                                                 font-weight: bold;
+//                                                 margin-left: auto;
+//                                             }
+//                                         }
+
+
+
+//                                     }
+
+//                                     .hiddenx {
+
+//                                         display: none;
 
 
 
                                                                   
                                         
-                                        }
+//                                         }
 
 
-                                        .menu:hover + .hiddenx {
+//                                         .menu:hover + .hiddenx {
 
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            border-top-right-radius: 20px;
-                                            border-bottom-right-radius: 20px;
-                                            background-color: $tertiary-color;
-                                            width: 20%;
-                                            margin-left: auto;
-
-
-                                        }
+//                                             display: flex;
+//                                             justify-content: center;
+//                                             align-items: center;
+//                                             border-top-right-radius: 20px;
+//                                             border-bottom-right-radius: 20px;
+//                                             background-color: $tertiary-color;
+//                                             width: 20%;
+//                                             margin-left: auto;
 
 
-
+//                                         }
 
 
 
-                                        i {
 
-                                            font: $tertiary-color;
-                                            color: $footer-font-color;
-                                            font-size: 1.5rem;
+
+
+//                                         i {
+
+//                                             font: $tertiary-color;
+//                                             color: $footer-font-color;
+//                                             font-size: 1.5rem;
                                             
-                                        }
+//                                         }
 
-                                    }
+//                                     }
 
 
 
@@ -899,44 +926,44 @@ body{
 
 
 
-                 .maindish{
+//                  .maindish{
 
-                     display: flex;
-                     flex-direction: column;
+//                      display: flex;
+//                      flex-direction: column;
                      
-                 }
+//                  }
 
-                .desserts {
-                        display: flex;
-                        flex-direction: column;
-                    }
+//                 .desserts {
+//                         display: flex;
+//                         flex-direction: column;
+//                     }
 
 
 
         
 
 
-                .order {
+//                 .order {
 
-                    @include flexsetting(row, center, center);
-                    flex-grow: 0;
-                    flex-shrink: 0;
-                    background-image: linear-gradient(180deg, $secondary-color, $primary-color);
-                    width: 153.55px;
-                    height: 19.2px;
-                    border-radius: 30px;
-                    margin: 0 auto;
-                    margin-bottom: 20px;
-                    padding: 10px 0;
-                    color: $footer-font-color;
-                    }
-            }
-
-
+//                     @include flexsetting(row, center, center);
+//                     flex-grow: 0;
+//                     flex-shrink: 0;
+//                     background-image: linear-gradient(180deg, $secondary-color, $primary-color);
+//                     width: 153.55px;
+//                     height: 19.2px;
+//                     border-radius: 30px;
+//                     margin: 0 auto;
+//                     margin-bottom: 20px;
+//                     padding: 10px 0;
+//                     color: $footer-font-color;
+//                     }
+//             }
 
 
-        }
-    }
+
+
+//         }
+    
 
 
     

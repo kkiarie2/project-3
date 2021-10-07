@@ -1,0 +1,613 @@
+@import './variables';
+
+
+
+
+
+
+
+
+        
+        
+    
+       
+        
+        
+
+        .wrapdiv {
+            display: flex;
+              flex-direction: column;
+              width: 100%;
+              justify-content: center;
+              margin-left: auto;
+              margin-right: auto;
+              background-color: $bastillebackground;
+
+              @include desktop {
+                width: 100%;
+            }
+
+
+
+              
+
+           
+
+             .intro {
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                margin-left: auto;
+                                margin-right: auto;
+                                
+                
+                                
+                               &__topimage {
+
+                                    display: flex;
+                                    flex-direction: column;
+                                    
+                                    width: 100%;
+                                    
+                                        @include desktop {
+                                            display: flex;
+                                            display: row;
+                                            align-items: center;
+                                            width: auto;
+                                            }
+                                        }
+                                        img {
+                                            width: 100%;
+
+                                            @include desktop {
+                                                width: 650px;
+                                                height: 300px;
+                                            }
+                                        }
+
+
+                                    &__titlediv {
+                                        @include flexsetting(row, center, center);
+                                        border-top-left-radius: 20px;
+                                        border-top-right-radius: 20px;
+                                        width: 100%;
+                                        margin-top: -30px;
+                                        background-color: $bastillebackground;
+    
+    
+    
+                                            @include tablet {
+                                                justify-content: space-between;
+                                            }
+        
+        
+        
+                                            @include desktop {
+                                                width: 650px;
+                                                justify-content: space-between;
+                                            }
+                                            
+        
+        
+                                            .title {
+                                                @include flexsetting(row, flex-start, center);
+                                                width: 80%;
+                                                padding-left: 20px;
+
+
+
+                                            }
+
+
+                                            .titleicon {
+                                                @include flexsetting(row, center, center);
+                                                font-family: $font-text;
+                                                padding-right: 20px;
+
+
+
+
+                                                
+        
+        
+                                                i {
+                                                font-size: 1.5rem; 
+                                                font-weight: 300;
+
+
+                                                }
+        
+                                                
+                                            }
+        
+        
+    
+    
+                                    }
+
+
+                                        @include desktop {
+                                            width: 650px;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                        }
+
+
+
+
+
+ 
+
+
+
+                                }
+
+
+
+
+
+
+
+                 }
+
+
+                 .allmenus {
+                     width: 100%;
+                     @include flexsetting (column, center, center); 
+                     
+
+
+                     
+
+
+
+
+                     @include desktop {
+                        @include flexsetting (row, space-around, flex-start);
+                        flex-wrap: wrap; 
+                        
+                     }
+                 }
+
+
+
+
+                 .wrapdiv:hover > .allmenus  {
+
+                    animation: fadein 2s;
+                    transform: top 50%;
+                    animation-delay: 1s;
+                    animation-timing-function: ease-in;
+
+
+                  }
+
+                  @keyframes fadein {
+                      from {
+                          opacity: 0;
+                      }
+
+                      to {
+                        opacity: 1;
+                      }
+                      
+                  }
+
+
+
+
+
+
+                 .cuisine {
+                     display: flex;
+                     flex-direction: column;
+                     width: 100%;
+                     
+
+
+
+
+                     @include desktop {
+                        width: 47%;
+                        flex-direction: column;
+
+                     }
+                     
+
+                 }
+
+
+                               
+
+
+                            
+
+
+
+                            .entrees  {
+
+                                display: flex;
+                                width: 100%;
+                                flex-direction: column;
+                                margin-left: auto;
+                                margin-right: auto;
+
+
+
+
+
+
+                                @include desktop {
+                                    width: 100%;
+                                    margin-left: 0;
+                                    
+
+                                }
+
+                            }
+
+
+
+             .meal {
+
+                                font-weight: $fonttype-light;
+                                margin-top: 20px;
+                                margin-bottom: 10px;
+                                padding-bottom: 10px;
+                                position: relative;
+
+
+                                @include smalltablet {
+                                    font-size: 16px;
+                                }
+
+
+                                @include tablet {
+                                    font-size: 20px;
+                                }
+
+                                @include desktop {
+                                    font-size: 22px;
+                                    margin-left: 20%;
+                                    width: 40%;
+                                }
+                                     
+
+                                
+                            
+                                }
+
+            .meal::before {
+                content:"";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 10%;
+                height: 3px;
+                border-bottom: 3px solid $tertiary-color;
+
+
+            }
+
+
+
+
+
+             .delicacy {
+
+                             box-shadow: $shadowsetting;
+                             border-radius: 20px;
+                             display: flex;
+                              width: 94%;
+                              margin: 10px 3%;
+                              justify-content: flex-start;
+                              margin-left: auto;
+                              margin-right: auto;
+
+
+
+
+
+
+
+
+
+                              @include desktop {
+                                width: 462.36px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                padding-top: 0;
+                                padding-bottom: 0;
+                                flex-direction: row;
+                            }
+
+
+                                    > div {
+                                        flex-direction: row;
+                                    }
+
+                                    .menu{
+                                                
+
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: flex-start;
+                                        width: 100%;
+                                        padding: 2% 5% 2% 5%;
+
+
+
+                                        &:hover {
+                                            width: 80%;
+                                        }
+
+
+
+
+                                        @include desktop {
+                                            padding-top: 0;
+                                            padding-bottom: 0;
+                                            flex: column;
+                                        }
+
+
+
+
+
+
+                                        &__item{
+                                                display: flex;
+                                                font-weight: 700; 
+                                                width: 100%;
+                                                font-size: 13px;
+                                                align-items: flex-start;
+
+                                                @include smalltablet {
+                                                    font-size: 15px;
+                                                }
+
+                                                @include tablet {
+                                                    font-size: 18px;
+                                                }
+
+                                                @include desktop {
+                                                    font-size: 18px;
+                                                }
+
+
+                                        }
+
+                                        &__ingredient {
+                                            display: flex;
+                                            font-weight: $fonttype-light;
+                                            width: 100%;
+                                            height: auto;
+                                            margin-left: 0;
+                                            font-size: 12px;
+
+                                            @include smalltablet {
+                                                font-size: 14px;
+                                            }
+
+                                            @include tablet {
+                                                font-size: 16px;
+                                            }
+
+
+                                            @include desktop {
+                                                font-size: 16px;
+                                            }
+
+
+                                            .cost{
+                                                font-weight: bold;
+                                                margin-left: auto;
+
+
+                                                @include desktop {
+                                                    font-size: 16px;
+                                                    margin-left: auto;
+                                                }
+                                            }
+                                        }
+
+
+
+
+
+
+
+
+                                    }
+
+
+
+                                    .hiddenx {
+
+                                        display: none;
+
+
+
+                                        i {
+
+                                            font: $tertiary-color;
+                                            color: $footer-font-color;
+                                            font-size: 1.5rem;
+
+
+
+                                            animation: rotation 0.4s;
+                                            animation-iteration-count: 1;
+                                            animation-timing-function: linear;
+
+                                            @keyframes rotation { 
+                                                from { transform: rotate(0deg); } to 
+                                                { transform: rotate(359deg); }
+                                             }
+
+
+                                        
+                                                
+
+
+                                        
+
+
+
+                                            
+                                            
+                                        }
+
+
+
+
+                          
+                                        
+                                        }
+
+
+                                        .menu:hover + .hiddenx {
+
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            border-top-right-radius: 20px;
+                                            border-bottom-right-radius: 20px;
+                                            background-color: $tertiary-color;
+                                            width: 20%;
+                                            margin-left: auto;
+                                            transition-property: width;
+                                            transition-duration: 350ms;
+                                            transition-timing-function: ease-in ;
+
+
+
+
+                                             
+
+
+                                        }
+
+
+
+
+
+
+
+
+
+
+
+                                    }
+
+
+
+                                  
+
+
+
+                 .maindish{
+
+                     display: flex;
+                     flex-direction: column;
+
+
+
+                     @include desktop {
+                        width: 100%;
+                        margin-left: 0;
+                        margin-right: auto;
+
+                    }
+                     
+                 }
+
+
+
+                .desserts {
+                        display: flex;
+                        flex-direction: column;
+
+
+
+
+                        @include desktop {
+                            width: 100%;
+                            margin-left: 0;
+                            margin-right: auto;
+
+                        }
+                    }
+
+
+
+        
+                
+                .orderwrap {
+                    
+
+                    @include desktop {
+                        width: 100%;
+                    }
+
+                }
+
+                .order {
+
+                    @include flexsetting(row, center, center);
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    background-image: linear-gradient(180deg, $secondary-color, $primary-color);
+                    width: 153.55px;
+                    height: 19.2px;
+                    border-radius: 30px;
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                    padding: 10px 0;
+                    color: $footer-font-color;
+                    }
+
+
+
+
+
+            
+
+
+
+
+        
+    
+
+
+    
+
+
+
+        
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
