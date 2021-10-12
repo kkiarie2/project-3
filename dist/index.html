@@ -21,9 +21,14 @@
 </head>
 
 
+
+
 <body>
 
- 
+    <div class="loader loading">
+
+    
+ <div class="contentwrap"> 
     
 
 <header> <div class="headerdiv"><h1>ohmyfood</h1></div>
@@ -143,8 +148,20 @@
 </footer>    
 
 
+</div>
 
 
+</div>
+<script>
+document.querySelector(".contentwrap").style.display = "none";
+document.querySelector(".loader").classList.add("loading");
+
+
+setTimeout(() => {
+  document.querySelector(".loader").classList.remove("loading");
+  document.querySelector(".contentwrap").style.display = "flex";
+}, 4000);
+</script> 
     
 </body>
 </html>

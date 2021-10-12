@@ -57,3 +57,21 @@ $shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
        @content; 
     }
 }
+
+
+
+@keyframes spin{
+    to {
+        transform: rotate(360deg) scale(1.5) perspective(150px) translateZ(60px);
+        opacity: 1;
+        
+    }
+}
+
+
+
+
+
+
+
+

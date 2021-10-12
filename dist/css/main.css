@@ -1,3 +1,27 @@
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg) scale(1.5) perspective(150px) translateZ(60px);
+            transform: rotate(360deg) scale(1.5) perspective(150px) translateZ(60px);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg) scale(1.5) perspective(150px) translateZ(60px);
+            transform: rotate(360deg) scale(1.5) perspective(150px) translateZ(60px);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg) scale(1.5) perspective(150px) translateZ(60px);
+            transform: rotate(360deg) scale(1.5) perspective(150px) translateZ(60px);
+    opacity: 1;
+  }
+}
+
 .menuheader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,6 +72,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.preloadwrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: fadein 1s ease-in;
+          animation: fadein 1s ease-in;
 }
 
 .wrapdiv {
@@ -248,35 +281,6 @@
   }
 }
 
-.wrapdiv:hover > .allmenus {
-  -webkit-animation: fadein 2s;
-          animation: fadein 2s;
-  -webkit-transform: top 50%;
-          transform: top 50%;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .cuisine {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -296,6 +300,27 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.cuisine.first {
+  -webkit-animation: slightdelay 300ms ease-in-out;
+          animation: slightdelay 300ms ease-in-out;
+  -webkit-animation-delay: 1100ms;
+          animation-delay: 1100ms;
+}
+
+.cuisine.second {
+  -webkit-animation: slightdelay1 300ms ease-in-out;
+          animation: slightdelay1 300ms ease-in-out;
+  -webkit-animation-delay: 1400ms;
+          animation-delay: 1400ms;
+}
+
+.cuisine.third {
+  -webkit-animation: slightdelay2 300ms ease-in-out;
+          animation: slightdelay2 300ms ease-in-out;
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
 }
 
 .entrees {
@@ -545,8 +570,8 @@
             transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -556,8 +581,8 @@
             transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -633,10 +658,140 @@
   color: #FFFFFF;
 }
 
+@-webkit-keyframes slightdelay {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slightdelay {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slightdelay1 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slightdelay1 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slightdelay2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slightdelay2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  90% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 body {
   margin: 0 2%;
   font-family: "Roboto", sans-serif;
   color: black;
+  position: relative;
+  z-index: -1;
 }
 
 @media (min-width: 769px) {
@@ -645,7 +800,36 @@ body {
   }
 }
 
-body .headerdiv {
+body .loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  align-items: center;
+}
+
+body .loader .contentwrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+body .loader .contentwrap .headerdiv {
   font-family: "Shrikhand", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -663,17 +847,17 @@ body .headerdiv {
   width: 98%;
 }
 
-body main {
+body .loader .contentwrap main {
   width: 98%;
 }
 
 @media (min-width: 769px) {
-  body main {
+  body .loader .contentwrap main {
     width: 100%;
   }
 }
 
-body .information {
+body .loader .contentwrap main .information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -689,7 +873,7 @@ body .information {
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
-  body .information {
+  body .loader .contentwrap main .information {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -698,7 +882,7 @@ body .information {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .information {
+  body .loader .contentwrap main .information {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -706,7 +890,7 @@ body .information {
   }
 }
 
-body .information .top {
+body .loader .contentwrap main .information .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -727,7 +911,7 @@ body .information .top {
   font-size: 1rem;
 }
 
-body .information .top__paris {
+body .loader .contentwrap main .information .top__paris {
   background-color: #c0c0c0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -747,13 +931,13 @@ body .information .top__paris {
   color: black;
 }
 
-body .information .top__paris i {
+body .loader .contentwrap main .information .top__paris i {
   margin-right: 10px;
   text-align: center;
   vertical-align: middle;
 }
 
-body .information .top__explore {
+body .loader .contentwrap main .information .top__explore {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -770,19 +954,19 @@ body .information .top__explore {
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
-  body .information .top__explore {
+  body .loader .contentwrap main .information .top__explore {
     width: 40%;
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .information .top__explore {
+  body .loader .contentwrap main .information .top__explore {
     width: 30%;
   }
 }
 
 @media (min-width: 769px) {
-  body .information .top__explore {
+  body .loader .contentwrap main .information .top__explore {
     width: 230.6px;
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
@@ -792,11 +976,11 @@ body .information .top__explore {
   }
 }
 
-body .information .top p {
+body .loader .contentwrap main .information .top p {
   text-align: center;
 }
 
-body .information .process {
+body .loader .contentwrap main .information .process {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -808,14 +992,14 @@ body .information .process {
   margin: 20px 0;
 }
 
-body .information .process__title {
+body .loader .contentwrap main .information .process__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-body .information .process__instructions {
+body .loader .contentwrap main .information .process__instructions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -832,7 +1016,7 @@ body .information .process__instructions {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .information .process__instructions {
+  body .loader .contentwrap main .information .process__instructions {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -843,7 +1027,7 @@ body .information .process__instructions {
 }
 
 @media (min-width: 769px) {
-  body .information .process__instructions {
+  body .loader .contentwrap main .information .process__instructions {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -853,7 +1037,7 @@ body .information .process__instructions {
   }
 }
 
-body .information .process__instructions .steps {
+body .loader .contentwrap main .information .process__instructions .steps {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -877,34 +1061,34 @@ body .information .process__instructions .steps {
   padding: 5px 10px 5px 0;
 }
 
-body .information .process__instructions .steps:hover {
+body .loader .contentwrap main .information .process__instructions .steps:hover {
   background-color: #f2eafb;
 }
 
-body .information .process__instructions .steps:hover .object i {
+body .loader .contentwrap main .information .process__instructions .steps:hover .object i {
   color: #9356DC;
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
-  body .information .process__instructions .steps {
+  body .loader .contentwrap main .information .process__instructions .steps {
     width: 60%;
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .information .process__instructions .steps {
+  body .loader .contentwrap main .information .process__instructions .steps {
     width: 40%;
   }
 }
 
 @media (min-width: 769px) {
-  body .information .process__instructions .steps {
+  body .loader .contentwrap main .information .process__instructions .steps {
     width: 304px;
     font-size: 22px;
   }
 }
 
-body .information .process__instructions .steps .number {
+body .loader .contentwrap main .information .process__instructions .steps .number {
   line-height: 7px;
   border-radius: 50%;
   padding: 7px;
@@ -927,7 +1111,7 @@ body .information .process__instructions .steps .number {
 }
 
 @media (min-width: 769px) {
-  body .information .process__instructions .steps .number {
+  body .loader .contentwrap main .information .process__instructions .steps .number {
     font-size: 14px;
     line-height: 8px;
     padding: 8px;
@@ -936,7 +1120,7 @@ body .information .process__instructions .steps .number {
   }
 }
 
-body .information .process__instructions .steps .number i {
+body .loader .contentwrap main .information .process__instructions .steps .number i {
   margin-right: auto;
   text-justify: middle;
   text-align: center;
@@ -955,7 +1139,7 @@ body .information .process__instructions .steps .number i {
   font-weight: 300;
 }
 
-body .information .process__instructions .steps .object {
+body .loader .contentwrap main .information .process__instructions .steps .object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -973,12 +1157,12 @@ body .information .process__instructions .steps .object {
 }
 
 @media (min-width: 769px) {
-  body .information .process__instructions .steps .object {
+  body .loader .contentwrap main .information .process__instructions .steps .object {
     font-size: 22px;
   }
 }
 
-body .information .process__instructions .steps .todo {
+body .loader .contentwrap main .information .process__instructions .steps .todo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -995,18 +1179,18 @@ body .information .process__instructions .steps .todo {
   margin-left: 10%;
 }
 
-body .information .process__instructions .steps .todo p {
+body .loader .contentwrap main .information .process__instructions .steps .todo p {
   font-size: 0.7rem;
   font-weight: bold;
 }
 
 @media (min-width: 769px) {
-  body .information .process__instructions .steps .todo p {
+  body .loader .contentwrap main .information .process__instructions .steps .todo p {
     font-size: 0.9rem;
   }
 }
 
-body .restaurants {
+body .loader .contentwrap main .restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1021,7 +1205,7 @@ body .restaurants {
   width: 100%;
 }
 
-body .restaurants__title {
+body .loader .contentwrap main .restaurants__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1029,7 +1213,7 @@ body .restaurants__title {
   margin-bottom: 2rem;
 }
 
-body .restaurants__available {
+body .loader .contentwrap main .restaurants__available {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1041,7 +1225,7 @@ body .restaurants__available {
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
-  body .restaurants__available {
+  body .loader .contentwrap main .restaurants__available {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1055,7 +1239,7 @@ body .restaurants__available {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .restaurants__available {
+  body .loader .contentwrap main .restaurants__available {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1068,7 +1252,7 @@ body .restaurants__available {
 }
 
 @media (min-width: 769px) {
-  body .restaurants__available {
+  body .loader .contentwrap main .restaurants__available {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1080,7 +1264,7 @@ body .restaurants__available {
   }
 }
 
-body .restaurants__available .options {
+body .loader .contentwrap main .restaurants__available .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1100,26 +1284,26 @@ body .restaurants__available .options {
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
-  body .restaurants__available .options {
+  body .loader .contentwrap main .restaurants__available .options {
     width: 40%;
     margin: 15px 20px;
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .restaurants__available .options {
+  body .loader .contentwrap main .restaurants__available .options {
     width: 269px;
   }
 }
 
 @media (min-width: 769px) {
-  body .restaurants__available .options {
+  body .loader .contentwrap main .restaurants__available .options {
     width: 20%;
     max-width: 290px;
   }
 }
 
-body .restaurants__available .options__picture {
+body .loader .contentwrap main .restaurants__available .options__picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1128,7 +1312,7 @@ body .restaurants__available .options__picture {
   z-index: 1;
 }
 
-body .restaurants__available .options__picture .new {
+body .loader .contentwrap main .restaurants__available .options__picture .new {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1155,7 +1339,7 @@ body .restaurants__available .options__picture .new {
   font-weight: bold;
 }
 
-body .restaurants__available .options__picture .new .layer {
+body .loader .contentwrap main .restaurants__available .options__picture .new .layer {
   background-color: #5dd1b5;
   position: absolute;
   top: 0;
@@ -1168,7 +1352,7 @@ body .restaurants__available .options__picture .new .layer {
   opacity: 75%;
 }
 
-body .restaurants__available .options__picture img {
+body .loader .contentwrap main .restaurants__available .options__picture img {
   width: 100%;
   height: 150px;
   border-top-left-radius: 20px;
@@ -1178,19 +1362,19 @@ body .restaurants__available .options__picture img {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .restaurants__available .options__picture img {
+  body .loader .contentwrap main .restaurants__available .options__picture img {
     width: 269px;
   }
 }
 
 @media (min-width: 769px) {
-  body .restaurants__available .options__picture img {
+  body .loader .contentwrap main .restaurants__available .options__picture img {
     max-height: 150px;
     max-width: 300px;
   }
 }
 
-body .restaurants__available .options__description {
+body .loader .contentwrap main .restaurants__available .options__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1212,7 +1396,7 @@ body .restaurants__available .options__description {
           align-items: center;
 }
 
-body .restaurants__available .options__description .name {
+body .loader .contentwrap main .restaurants__available .options__description .name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1232,20 +1416,20 @@ body .restaurants__available .options__description .name {
   padding-left: 1rem;
 }
 
-body .restaurants__available .options__description .name p {
+body .loader .contentwrap main .restaurants__available .options__description .name p {
   margin: 0;
 }
 
-body .restaurants__available .options__description .name .city {
+body .loader .contentwrap main .restaurants__available .options__description .name .city {
   font-weight: 300;
   margin: 0;
 }
 
-body .restaurants__available .options__description .name .city p {
+body .loader .contentwrap main .restaurants__available .options__description .name .city p {
   margin: 0;
 }
 
-body .restaurants__available .options__description .heart {
+body .loader .contentwrap main .restaurants__available .options__description .heart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1260,13 +1444,13 @@ body .restaurants__available .options__description .heart {
   position: relative;
 }
 
-body .restaurants__available .options__description .heart #far {
+body .loader .contentwrap main .restaurants__available .options__description .heart #far {
   display: block;
   color: black;
   position: relative;
 }
 
-body .restaurants__available .options__description .heart #solid {
+body .loader .contentwrap main .restaurants__available .options__description .heart #solid {
   display: none;
   color: #9356DC;
   position: relative;
@@ -1275,17 +1459,17 @@ body .restaurants__available .options__description .heart #solid {
   z-index: 99;
 }
 
-body .restaurants__available .options:hover #solid {
+body .loader .contentwrap main .restaurants__available .options:hover #solid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body .restaurants__available .options:hover #far {
+body .loader .contentwrap main .restaurants__available .options:hover #far {
   display: none;
 }
 
-.footerdiv {
+body .loader .contentwrap .footerdiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1302,12 +1486,12 @@ body .restaurants__available .options:hover #far {
 }
 
 @media (min-width: 769px) {
-  .footerdiv {
+  body .loader .contentwrap .footerdiv {
     width: 100%;
   }
 }
 
-.footerdiv__title {
+body .loader .contentwrap .footerdiv__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1318,7 +1502,7 @@ body .restaurants__available .options:hover #far {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  .footerdiv__title {
+  body .loader .contentwrap .footerdiv__title {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1327,7 +1511,7 @@ body .restaurants__available .options:hover #far {
 }
 
 @media (min-width: 769px) {
-  .footerdiv__title {
+  body .loader .contentwrap .footerdiv__title {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1335,7 +1519,7 @@ body .restaurants__available .options:hover #far {
   }
 }
 
-.footerdiv__list {
+body .loader .contentwrap .footerdiv__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1352,7 +1536,7 @@ body .restaurants__available .options:hover #far {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  .footerdiv__list {
+  body .loader .contentwrap .footerdiv__list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1364,7 +1548,7 @@ body .restaurants__available .options:hover #far {
 }
 
 @media (min-width: 769px) {
-  .footerdiv__list {
+  body .loader .contentwrap .footerdiv__list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1378,7 +1562,7 @@ body .restaurants__available .options:hover #far {
   }
 }
 
-.footerdiv__list ul li {
+body .loader .contentwrap .footerdiv__list ul li {
   list-style-type: none;
   width: 100%;
   line-height: 20px;
@@ -1387,22 +1571,48 @@ body .restaurants__available .options:hover #far {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  .footerdiv__list ul li {
+  body .loader .contentwrap .footerdiv__list ul li {
     display: inline;
     margin-left: 20px;
   }
 }
 
 @media (min-width: 769px) {
-  .footerdiv__list ul li {
+  body .loader .contentwrap .footerdiv__list ul li {
     display: inline;
     padding: 0 20px;
     margin-right: 20px;
   }
 }
 
-.footerdiv__list ul li a {
+body .loader .contentwrap .footerdiv__list ul li a {
   text-decoration: none;
   color: #FFFFFF;
+}
+
+.loading::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 200px;
+  z-index: 30;
+  border: 10px dotted transparent;
+  border-color: #FF79DA #99E2D0 #9356DC #99E2D0;
+  border-radius: 50%;
+  opacity: 0.5;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+@media (min-width: 769px) {
+  .loading::before {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-bottom: -50px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
