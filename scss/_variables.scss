@@ -17,6 +17,7 @@ $descriptionbackground: white;
 $fonttype-light: 300;
 $bastillebackground: #f6f6f6;
 $shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$explore-color: linear-gradient(180deg, $secondary-color, $primary-color); 
 
 
 
@@ -59,6 +60,7 @@ $shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 
+//homepage keyframes
 
 @keyframes spin{
     to {
@@ -70,7 +72,47 @@ $shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 
 
+//bastille keyframes
 
+
+
+
+
+
+
+
+
+
+@keyframes slightdelay {
+    0% {
+        
+        opacity: 0;
+    
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+    
+    
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+@keyframes fadein {
+    0% { opacity: 0;}
+
+    100% {opacity: 0;}
+}
 
 
 
