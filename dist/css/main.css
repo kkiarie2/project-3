@@ -14,6 +14,30 @@
   }
 }
 
+@-webkit-keyframes showcontentwrap {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showcontentwrap {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes slightdelay {
   0% {
     opacity: 0;
@@ -64,10 +88,40 @@
   }
 }
 
+@-webkit-keyframes hideloading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hideloading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes spin {
   to {
     -webkit-transform: rotate(360deg) scale(1.5) perspective(150px) translateZ(60px);
             transform: rotate(360deg) scale(1.5) perspective(150px) translateZ(60px);
+    opacity: 1;
+  }
+}
+
+@keyframes showcontentwrap {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -95,6 +149,136 @@
   100% {
     opacity: 0;
   }
+}
+
+@keyframes hideloading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.footerdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #000000;
+  bottom: 0;
+  color: #FFFFFF;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 98%;
+}
+
+@media (min-width: 769px) {
+  .footerdiv {
+    width: 100%;
+  }
+}
+
+.footerdiv__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Shrikhand", cursive;
+  padding-left: 40px;
+  font-size: 20px;
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  .footerdiv__title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 769px) {
+  .footerdiv__title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 24px;
+  }
+}
+
+.footerdiv__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  .footerdiv__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-width: 769px) {
+  .footerdiv__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.footerdiv__list ul li {
+  list-style-type: none;
+  width: 100%;
+  line-height: 20px;
+  margin: 5px 0;
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  .footerdiv__list ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .footerdiv__list ul li {
+    display: inline;
+    padding: 0 20px;
+    margin-right: 20px;
+  }
+}
+
+.footerdiv__list ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .menuheader {
@@ -383,8 +567,8 @@
           animation: slightdelay 300ms ease-in-out;
   -webkit-animation-delay: 1300ms;
           animation-delay: 1300ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .cuisine.second {
@@ -392,8 +576,8 @@
           animation: slightdelay 300ms ease-in-out;
   -webkit-animation-delay: 1600ms;
           animation-delay: 1600ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .cuisine.third {
@@ -401,8 +585,8 @@
           animation: slightdelay 300ms ease-in-out;
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .entrees {
@@ -633,6 +817,8 @@
 
 .delicacy .menu:hover + .hiddenx {
   width: 20%;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
 }
 
 .delicacy .menu:hover + .hiddenx i {
@@ -738,6 +924,136 @@
   margin-bottom: 20px;
   padding: 10px 0;
   color: #FFFFFF;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.order:active, .order:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 7px, rgba(0, 0, 0, 0.24) -1px -3px 7px;
+          box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 7px, rgba(0, 0, 0, 0.24) -1px -3px 7px;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+}
+
+.footerdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #000000;
+  bottom: 0;
+  color: #FFFFFF;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 98%;
+}
+
+@media (min-width: 769px) {
+  .footerdiv {
+    width: 100%;
+  }
+}
+
+.footerdiv__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Shrikhand", cursive;
+  padding-left: 40px;
+  font-size: 20px;
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  .footerdiv__title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 769px) {
+  .footerdiv__title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 24px;
+  }
+}
+
+.footerdiv__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  .footerdiv__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-width: 769px) {
+  .footerdiv__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.footerdiv__list ul li {
+  list-style-type: none;
+  width: 100%;
+  line-height: 20px;
+  margin: 5px 0;
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  .footerdiv__list ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .footerdiv__list ul li {
+    display: inline;
+    padding: 0 20px;
+    margin-right: 20px;
+  }
+}
+
+.footerdiv__list ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 body {
@@ -770,9 +1086,16 @@ body .loader {
           align-items: center;
   width: 100%;
   align-items: center;
+  opacity: 1;
+  -webkit-animation: hideloading 0.1s ease-in;
+          animation: hideloading 0.1s ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
-body .loader .contentwrap {
+body .contentwrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -781,9 +1104,16 @@ body .loader .contentwrap {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  opacity: 0;
+  -webkit-animation: showcontentwrap 0.3s ease-in;
+          animation: showcontentwrap 0.3s ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
 }
 
-body .loader .contentwrap .headerdiv {
+body .contentwrap .headerdiv {
   font-family: "Shrikhand", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -801,17 +1131,17 @@ body .loader .contentwrap .headerdiv {
   width: 98%;
 }
 
-body .loader .contentwrap main {
+body .contentwrap main {
   width: 98%;
 }
 
 @media (min-width: 769px) {
-  body .loader .contentwrap main {
+  body .contentwrap main {
     width: 100%;
   }
 }
 
-body .loader .contentwrap main .information {
+body .contentwrap main .information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -827,7 +1157,7 @@ body .loader .contentwrap main .information {
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
-  body .loader .contentwrap main .information {
+  body .contentwrap main .information {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -836,7 +1166,7 @@ body .loader .contentwrap main .information {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .loader .contentwrap main .information {
+  body .contentwrap main .information {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -844,7 +1174,7 @@ body .loader .contentwrap main .information {
   }
 }
 
-body .loader .contentwrap main .information .top {
+body .contentwrap main .information .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -865,7 +1195,7 @@ body .loader .contentwrap main .information .top {
   font-size: 1rem;
 }
 
-body .loader .contentwrap main .information .top__paris {
+body .contentwrap main .information .top__paris {
   background-color: #c0c0c0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -885,13 +1215,13 @@ body .loader .contentwrap main .information .top__paris {
   color: black;
 }
 
-body .loader .contentwrap main .information .top__paris i {
+body .contentwrap main .information .top__paris i {
   margin-right: 10px;
   text-align: center;
   vertical-align: middle;
 }
 
-body .loader .contentwrap main .information .top__explore {
+body .contentwrap main .information .top__explore {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -909,27 +1239,29 @@ body .loader .contentwrap main .information .top__explore {
           box-shadow: rgba(0, 4, 10, 0.3) 0 6px 6px;
 }
 
-body .loader .contentwrap main .information .top__explore:hover, body .loader .contentwrap main .information .top__explore:active {
+body .contentwrap main .information .top__explore:hover, body .contentwrap main .information .top__explore:active {
   -webkit-box-shadow: rgba(0, 4, 10, 0.3) 0 10px 10px;
           box-shadow: rgba(0, 4, 10, 0.3) 0 10px 10px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff83dd), to(#985ede));
   background-image: linear-gradient(180deg, #ff83dd, #985ede);
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
-  body .loader .contentwrap main .information .top__explore {
+  body .contentwrap main .information .top__explore {
     width: 40%;
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .loader .contentwrap main .information .top__explore {
+  body .contentwrap main .information .top__explore {
     width: 30%;
   }
 }
 
 @media (min-width: 769px) {
-  body .loader .contentwrap main .information .top__explore {
+  body .contentwrap main .information .top__explore {
     width: 230.6px;
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
@@ -939,11 +1271,11 @@ body .loader .contentwrap main .information .top__explore:hover, body .loader .c
   }
 }
 
-body .loader .contentwrap main .information .top p {
+body .contentwrap main .information .top p {
   text-align: center;
 }
 
-body .loader .contentwrap main .information .process {
+body .contentwrap main .information .process {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -955,14 +1287,14 @@ body .loader .contentwrap main .information .process {
   margin: 20px 0;
 }
 
-body .loader .contentwrap main .information .process__title {
+body .contentwrap main .information .process__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-body .loader .contentwrap main .information .process__instructions {
+body .contentwrap main .information .process__instructions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -979,7 +1311,7 @@ body .loader .contentwrap main .information .process__instructions {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .loader .contentwrap main .information .process__instructions {
+  body .contentwrap main .information .process__instructions {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -990,7 +1322,7 @@ body .loader .contentwrap main .information .process__instructions {
 }
 
 @media (min-width: 769px) {
-  body .loader .contentwrap main .information .process__instructions {
+  body .contentwrap main .information .process__instructions {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1000,7 +1332,7 @@ body .loader .contentwrap main .information .process__instructions {
   }
 }
 
-body .loader .contentwrap main .information .process__instructions .steps {
+body .contentwrap main .information .process__instructions .steps {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1024,36 +1356,40 @@ body .loader .contentwrap main .information .process__instructions .steps {
   padding: 5px 10px 5px 0;
 }
 
-body .loader .contentwrap main .information .process__instructions .steps:hover {
+body .contentwrap main .information .process__instructions .steps:hover {
   background-color: #f2eafb;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 7px, rgba(0, 0, 0, 0.24) -1px -3px 7px;
           box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 7px, rgba(0, 0, 0, 0.24) -1px -3px 7px;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
 }
 
-body .loader .contentwrap main .information .process__instructions .steps:hover .object i {
+body .contentwrap main .information .process__instructions .steps:hover .object i {
   color: #9356DC;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
-  body .loader .contentwrap main .information .process__instructions .steps {
+  body .contentwrap main .information .process__instructions .steps {
     width: 60%;
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .loader .contentwrap main .information .process__instructions .steps {
+  body .contentwrap main .information .process__instructions .steps {
     width: 40%;
   }
 }
 
 @media (min-width: 769px) {
-  body .loader .contentwrap main .information .process__instructions .steps {
+  body .contentwrap main .information .process__instructions .steps {
     width: 304px;
     font-size: 22px;
   }
 }
 
-body .loader .contentwrap main .information .process__instructions .steps .number {
+body .contentwrap main .information .process__instructions .steps .number {
   line-height: 7px;
   border-radius: 50%;
   padding: 7px;
@@ -1076,7 +1412,7 @@ body .loader .contentwrap main .information .process__instructions .steps .numbe
 }
 
 @media (min-width: 769px) {
-  body .loader .contentwrap main .information .process__instructions .steps .number {
+  body .contentwrap main .information .process__instructions .steps .number {
     font-size: 14px;
     line-height: 8px;
     padding: 8px;
@@ -1085,7 +1421,7 @@ body .loader .contentwrap main .information .process__instructions .steps .numbe
   }
 }
 
-body .loader .contentwrap main .information .process__instructions .steps .number i {
+body .contentwrap main .information .process__instructions .steps .number i {
   margin-right: auto;
   text-justify: middle;
   text-align: center;
@@ -1104,7 +1440,7 @@ body .loader .contentwrap main .information .process__instructions .steps .numbe
   font-weight: 300;
 }
 
-body .loader .contentwrap main .information .process__instructions .steps .object {
+body .contentwrap main .information .process__instructions .steps .object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1122,12 +1458,12 @@ body .loader .contentwrap main .information .process__instructions .steps .objec
 }
 
 @media (min-width: 769px) {
-  body .loader .contentwrap main .information .process__instructions .steps .object {
+  body .contentwrap main .information .process__instructions .steps .object {
     font-size: 22px;
   }
 }
 
-body .loader .contentwrap main .information .process__instructions .steps .todo {
+body .contentwrap main .information .process__instructions .steps .todo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1144,18 +1480,18 @@ body .loader .contentwrap main .information .process__instructions .steps .todo 
   margin-left: 5%;
 }
 
-body .loader .contentwrap main .information .process__instructions .steps .todo p {
+body .contentwrap main .information .process__instructions .steps .todo p {
   font-size: 1rem;
   font-weight: bold;
 }
 
 @media (min-width: 769px) {
-  body .loader .contentwrap main .information .process__instructions .steps .todo p {
+  body .contentwrap main .information .process__instructions .steps .todo p {
     font-size: 1rem;
   }
 }
 
-body .loader .contentwrap main .restaurants {
+body .contentwrap main .restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1170,7 +1506,7 @@ body .loader .contentwrap main .restaurants {
   width: 100%;
 }
 
-body .loader .contentwrap main .restaurants__title {
+body .contentwrap main .restaurants__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1178,7 +1514,7 @@ body .loader .contentwrap main .restaurants__title {
   margin-bottom: 2rem;
 }
 
-body .loader .contentwrap main .restaurants__available {
+body .contentwrap main .restaurants__available {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1190,7 +1526,7 @@ body .loader .contentwrap main .restaurants__available {
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
-  body .loader .contentwrap main .restaurants__available {
+  body .contentwrap main .restaurants__available {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1204,7 +1540,7 @@ body .loader .contentwrap main .restaurants__available {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .loader .contentwrap main .restaurants__available {
+  body .contentwrap main .restaurants__available {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1217,7 +1553,7 @@ body .loader .contentwrap main .restaurants__available {
 }
 
 @media (min-width: 769px) {
-  body .loader .contentwrap main .restaurants__available {
+  body .contentwrap main .restaurants__available {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1229,7 +1565,7 @@ body .loader .contentwrap main .restaurants__available {
   }
 }
 
-body .loader .contentwrap main .restaurants__available .options {
+body .contentwrap main .restaurants__available .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1249,26 +1585,26 @@ body .loader .contentwrap main .restaurants__available .options {
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
-  body .loader .contentwrap main .restaurants__available .options {
+  body .contentwrap main .restaurants__available .options {
     width: 40%;
     margin: 15px 20px;
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .loader .contentwrap main .restaurants__available .options {
+  body .contentwrap main .restaurants__available .options {
     width: 269px;
   }
 }
 
 @media (min-width: 769px) {
-  body .loader .contentwrap main .restaurants__available .options {
+  body .contentwrap main .restaurants__available .options {
     width: 20%;
     max-width: 290px;
   }
 }
 
-body .loader .contentwrap main .restaurants__available .options__picture {
+body .contentwrap main .restaurants__available .options__picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1277,7 +1613,7 @@ body .loader .contentwrap main .restaurants__available .options__picture {
   z-index: 1;
 }
 
-body .loader .contentwrap main .restaurants__available .options__picture .new {
+body .contentwrap main .restaurants__available .options__picture .new {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1304,7 +1640,7 @@ body .loader .contentwrap main .restaurants__available .options__picture .new {
   font-weight: bold;
 }
 
-body .loader .contentwrap main .restaurants__available .options__picture .new .layer {
+body .contentwrap main .restaurants__available .options__picture .new .layer {
   background-color: #5dd1b5;
   position: absolute;
   top: 0;
@@ -1317,7 +1653,7 @@ body .loader .contentwrap main .restaurants__available .options__picture .new .l
   opacity: 75%;
 }
 
-body .loader .contentwrap main .restaurants__available .options__picture img {
+body .contentwrap main .restaurants__available .options__picture img {
   width: 100%;
   height: 150px;
   border-top-left-radius: 20px;
@@ -1327,19 +1663,19 @@ body .loader .contentwrap main .restaurants__available .options__picture img {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .loader .contentwrap main .restaurants__available .options__picture img {
+  body .contentwrap main .restaurants__available .options__picture img {
     width: 269px;
   }
 }
 
 @media (min-width: 769px) {
-  body .loader .contentwrap main .restaurants__available .options__picture img {
+  body .contentwrap main .restaurants__available .options__picture img {
     max-height: 150px;
     max-width: 300px;
   }
 }
 
-body .loader .contentwrap main .restaurants__available .options__description {
+body .contentwrap main .restaurants__available .options__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1359,9 +1695,10 @@ body .loader .contentwrap main .restaurants__available .options__description {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-body .loader .contentwrap main .restaurants__available .options__description .name {
+body .contentwrap main .restaurants__available .options__description .name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1381,20 +1718,20 @@ body .loader .contentwrap main .restaurants__available .options__description .na
   padding-left: 1rem;
 }
 
-body .loader .contentwrap main .restaurants__available .options__description .name p {
+body .contentwrap main .restaurants__available .options__description .name p {
   margin: 0;
 }
 
-body .loader .contentwrap main .restaurants__available .options__description .name .city {
+body .contentwrap main .restaurants__available .options__description .name .city {
   font-weight: 300;
   margin: 0;
 }
 
-body .loader .contentwrap main .restaurants__available .options__description .name .city p {
+body .contentwrap main .restaurants__available .options__description .name .city p {
   margin: 0;
 }
 
-body .loader .contentwrap main .restaurants__available .options__description .heart {
+body .contentwrap main .restaurants__available .options__description .heart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1409,150 +1746,37 @@ body .loader .contentwrap main .restaurants__available .options__description .he
   position: relative;
 }
 
-body .loader .contentwrap main .restaurants__available .options__description .heart #far {
+body .contentwrap main .restaurants__available .options__description .heart #far {
   display: block;
-  color: black;
-  position: relative;
-}
-
-body .loader .contentwrap main .restaurants__available .options__description .heart #solid {
-  display: none;
-  color: #9356DC;
-  position: relative;
+  color: #000000;
+  position: absolute;
   left: 0;
   top: 0;
-  z-index: 99;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: opacity 50ms ease-in;
+  transition: opacity 50ms ease-in;
 }
 
-body .loader .contentwrap main .restaurants__available .options:hover #solid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body .contentwrap main .restaurants__available .options__description .heart #solid {
+  display: block;
+  color: #9356DC;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
 }
 
-body .loader .contentwrap main .restaurants__available .options:hover #far {
-  display: none;
+body .contentwrap main .restaurants__available .options:hover #solid {
+  opacity: 1;
+  z-index: 2;
 }
 
-body .loader .contentwrap .footerdiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #000000;
-  bottom: 0;
-  color: #FFFFFF;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  width: 98%;
-}
-
-@media (min-width: 769px) {
-  body .loader .contentwrap .footerdiv {
-    width: 100%;
-  }
-}
-
-body .loader .contentwrap .footerdiv__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: "Shrikhand", cursive;
-  padding-left: 40px;
-  font-size: 20px;
-  padding-bottom: 0;
-}
-
-@media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .loader .contentwrap .footerdiv__title {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 769px) {
-  body .loader .contentwrap .footerdiv__title {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 24px;
-  }
-}
-
-body .loader .contentwrap .footerdiv__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-@media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .loader .contentwrap .footerdiv__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-@media (min-width: 769px) {
-  body .loader .contentwrap .footerdiv__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-body .loader .contentwrap .footerdiv__list ul li {
-  list-style-type: none;
-  width: 100%;
-  line-height: 20px;
-  margin: 5px 0;
-  color: #FFFFFF;
-}
-
-@media only screen and (max-width: 768px) and (min-width: 577px) {
-  body .loader .contentwrap .footerdiv__list ul li {
-    display: inline;
-    margin-left: 20px;
-  }
-}
-
-@media (min-width: 769px) {
-  body .loader .contentwrap .footerdiv__list ul li {
-    display: inline;
-    padding: 0 20px;
-    margin-right: 20px;
-  }
-}
-
-body .loader .contentwrap .footerdiv__list ul li a {
-  text-decoration: none;
-  color: #FFFFFF;
+body .contentwrap main .restaurants__available .options:hover #far {
+  opacity: 0;
 }
 
 .loading::before {
@@ -1566,7 +1790,22 @@ body .loader .contentwrap .footerdiv__list ul li a {
   border-color: #FF79DA #99E2D0 #9356DC #99E2D0;
   border-radius: 50%;
   opacity: 0.5;
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
+  -webkit-animation: spin;
+          animation: spin;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
+}
+
+.loading::after {
+  content: '';
+  opacity: 0;
+  -webkit-animation: hideloading 0.05s forwards;
+          animation: hideloading 0.05s forwards;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 /*# sourceMappingURL=main.css.map */

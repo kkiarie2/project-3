@@ -1,0 +1,98 @@
+.footerdiv{
+             
+    display: flex;
+    flex-direction: column;
+    background-color: $footer-background;
+    bottom: 0;
+    color: $footer-font-color;
+    flex-wrap: nowrap;
+    width: 98%;
+
+    @include desktop {
+        width: 100%;
+    }
+
+       
+
+
+
+
+     &__title {
+                display: flex;
+                font-family: $font-logo;
+                padding-left: 40px;
+                font-size: 20px;
+                padding-bottom: 0;
+
+                @include tablet{
+                   justify-content: center;
+                   font-size: 24px;
+                }
+                @include desktop {
+                    justify-content: center;
+                    font-size: 24px; 
+                }
+    
+        
+      }
+
+            &__list {
+
+                        @include flexsetting (column, flex-start, flex-start); 
+
+                        @include tablet{
+                            
+                            flex-direction: row;
+                            align-items: flex-start;
+                            
+                            
+                        }
+                        @include desktop {
+                            
+                            flex-direction: row;
+                            align-items: flex-start;
+                            justify-content: center;
+                            
+                            
+                        }
+
+                    ul {
+
+                    
+                            li {
+                        
+                                list-style-type: none;
+                                width: 100%;
+                                line-height: 20px;
+                                margin: 5px 0;
+                                color: $footer-font-color;
+
+
+                                @include tablet {
+                                    display: inline;
+                                    margin-left: 20px;
+                                }
+
+                                @include desktop {
+                                    display: inline;
+                                    padding: 0 20px;
+                                    margin-right: 20px;
+                                }
+                            
+                            
+
+                                    a {
+                                                
+                                    text-decoration: none;
+                                    color: $footer-font-color;
+                                    
+                                    }
+
+
+                                   
+                            }
+
+                        }
+
+                 }        
+    }

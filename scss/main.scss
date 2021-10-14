@@ -1,6 +1,7 @@
 
 @import './variables';
 @import './bastille';
+@import './footer';
 
 
 
@@ -35,29 +36,26 @@ body{
         @include flexsetting(column, center, center);
         width: 100%;
         align-items: center;
+        opacity: 1;
+        animation: hideloading 0.1s ease-in;
+        animation-fill-mode: forwards;
+        animation-duration: 5s;
 
 
 
+    }
 
-
-
-
-
-    
-
-
-    
-    
-    
-    
-    
-    
+   
     
     .contentwrap {
         
         display: flex;
         flex-direction: column;
         width: 100%;
+        opacity: 0;
+        animation: showcontentwrap 0.3s ease-in;
+        animation-fill-mode: forwards;
+        animation-duration: 6s;
     
         
 
@@ -85,15 +83,6 @@ body{
     
 
   
-
-   
-
-
-    
-
-    
-
-     
 
         .information {
             display: flex;
@@ -148,6 +137,7 @@ body{
                         &:hover, &:active {
                             box-shadow:  rgba(0, 4, 10, 0.3) 0 10px 10px;
                             background-image: linear-gradient(180deg, lighten($secondary-color, 2%), lighten($primary-color, 2%)); 
+                            @include gradual-change;
                             
                         }
                         
@@ -219,18 +209,19 @@ body{
                         margin-left: auto;
                         margin-right: auto;
                         margin-top: 20px;
-                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        box-shadow: $buttonshadow;
                         border-radius: 15px;
                         padding: 5px 10px 5px 0;
 
                         &:hover {
                             background-color: lighten($primary-color, 35%);
-                            box-shadow: rgba(0, 0, 0, 0.24) 1px 3px 7px,
-                                        rgba(0, 0, 0, 0.24) -1px -3px 7px;
+                            box-shadow: $hoverbutton-shadow;
+                            @include gradual-change;
                         }
 
                         &:hover .object i{
                             color: $primary-color;
+                            @include gradual-change;
                         }
 
                         @include smalltablet{
@@ -517,6 +508,7 @@ body{
                                         border-bottom-left-radius: 20px;
                                         border-bottom-right-radius: 20px;
                                         align-items: center;
+                                        position: relative;
                                        
 
 
@@ -557,19 +549,28 @@ body{
 
                                             #far {
                                                 display: block;
-                                                color: black;
-                                                position: relative;
+                                                color: $footer-background;
+                                                position: absolute;
+                                                left: 0;
+                                                top: 0;
+                                                z-index: 1;
+                                                opacity: 1;
+                                                transition: opacity 50ms ease-in;
+                                                
                                                 
                                                 
                                             }
 
                                             #solid {
-                                                display: none;
+                                                display: block;
                                                 color: $primary-color;
-                                                position: relative;
+                                                position: absolute;
                                                 left: 0;
                                                 top: 0;
-                                                z-index: 99;
+                                                z-index: -1;
+                                                opacity: 0;
+                                                transition: opacity 500ms ease-in;
+                                                
 
 
 
@@ -594,13 +595,14 @@ body{
 
                                     &:hover #solid{
 
-                                        display: flex;
+                                        opacity: 1;
+                                        z-index: 2;
                                        
                                         
                                     } 
                                     &:hover #far{
 
-                                        display: none;
+                                        opacity: 0;
                                        
                                         
                                     } 
@@ -619,109 +621,12 @@ body{
         }
     
 
-.footerdiv{
-             
-    display: flex;
-    flex-direction: column;
-    background-color: $footer-background;
-    bottom: 0;
-    color: $footer-font-color;
-    flex-wrap: nowrap;
-    width: 98%;
 
-    @include desktop {
-        width: 100%;
-    }
-
-       
-
-
-
-
-     &__title {
-                display: flex;
-                font-family: $font-logo;
-                padding-left: 40px;
-                font-size: 20px;
-                padding-bottom: 0;
-
-                @include tablet{
-                   justify-content: center;
-                   font-size: 24px;
-                }
-                @include desktop {
-                    justify-content: center;
-                    font-size: 24px; 
-                }
-    
-        
-      }
-
-            &__list {
-
-                        @include flexsetting (column, flex-start, flex-start); 
-
-                        @include tablet{
-                            
-                            flex-direction: row;
-                            align-items: flex-start;
-                            
-                            
-                        }
-                        @include desktop {
-                            
-                            flex-direction: row;
-                            align-items: flex-start;
-                            justify-content: center;
-                            
-                            
-                        }
-
-                    ul {
-
-                    
-                            li {
-                        
-                                list-style-type: none;
-                                width: 100%;
-                                line-height: 20px;
-                                margin: 5px 0;
-                                color: $footer-font-color;
-
-
-                                @include tablet {
-                                    display: inline;
-                                    margin-left: 20px;
-                                }
-
-                                @include desktop {
-                                    display: inline;
-                                    padding: 0 20px;
-                                    margin-right: 20px;
-                                }
-                            
-                            
-
-                                    a {
-                                                
-                                    text-decoration: none;
-                                    color: $footer-font-color;
-                                    
-                                    }
-
-
-                                   
-                            }
-
-                        }
-
-                 }        
-    }
 
      
   }
 
-}
+
 
 
 }
@@ -740,13 +645,24 @@ body{
     border: 10px dotted transparent;
     border-color: $secondary-color $tertiary-color $primary-color $tertiary-color;
     border-radius: 50%;
-    opacity: 0.5;
-    animation: spin 1s linear infinite;
+    opacity: 0.5; 
+    animation: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 4;
+    
 
 
 
    
 
+}
+
+.loading::after {
+    content: '';
+    opacity: 0;
+    animation: hideloading 0.05s forwards;
+    animation-delay: 4s;
 }
 
 

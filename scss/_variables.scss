@@ -17,10 +17,14 @@ $descriptionbackground: white;
 $fonttype-light: 300;
 $bastillebackground: #f6f6f6;
 $shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$buttonshadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$hoverbutton-shadow: rgba(0, 0, 0, 0.24) 1px 3px 7px,
+                    rgba(0, 0, 0, 0.24) -1px -3px 7px;
 $explore-color: linear-gradient(180deg, $secondary-color, $primary-color); 
 
 
 
+//mixins
 
 @mixin font ( $font-weight, $color: black, $fontsize: 1.2rem) {
     
@@ -60,6 +64,11 @@ $explore-color: linear-gradient(180deg, $secondary-color, $primary-color);
 }
 
 
+@mixin gradual-change {
+    transition: all 5s ease-in-out;
+}
+
+
 //homepage keyframes
 
 @keyframes spin{
@@ -70,7 +79,14 @@ $explore-color: linear-gradient(180deg, $secondary-color, $primary-color);
     }
 }
 
+@keyframes showcontentwrap{
 
+    0% { opacity: 0;}
+
+    60% { opacity: 0;}
+
+    100% {opacity: 1;}
+}
 
 //bastille keyframes
 
@@ -110,6 +126,13 @@ $explore-color: linear-gradient(180deg, $secondary-color, $primary-color);
 
 @keyframes fadein {
     0% { opacity: 0;}
+
+    100% {opacity: 0;}
+}
+
+
+@keyframes hideloading {
+    0% { opacity: 1;}
 
     100% {opacity: 0;}
 }

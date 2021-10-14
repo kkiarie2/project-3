@@ -1,4 +1,5 @@
 @import './variables';
+@import './footer';
 
 
 
@@ -228,7 +229,7 @@
                  .cuisine.first {
                     animation: slightdelay 300ms ease-in-out;
                     animation-delay: 1300ms;
-                    animation-fill-mode: forwards;
+                    animation-fill-mode: backwards;
                     
 
                  }
@@ -236,14 +237,14 @@
                 .cuisine.second {
                     animation: slightdelay 300ms ease-in-out;
                     animation-delay: 1600ms;
-                    animation-fill-mode: forwards;
+                    animation-fill-mode: backwards;
                     
                 }
 
                 .cuisine.third {
                     animation: slightdelay 300ms ease-in-out;
                     animation-delay: 2000ms;
-                    animation-fill-mode: forwards;
+                    animation-fill-mode: backwards;
                     
                 }
 
@@ -500,6 +501,7 @@
                                     .menu:hover + .hiddenx  {
                                         
                                         width: 20%;
+                                        @include gradual-change;
                                         
                                         
 
@@ -511,6 +513,7 @@
                                         animation-iteration-count: 1;
                                         animation-timing-function: linear;
                                         animation-delay: 0.3s;
+                                        
 
                                         @keyframes rotation { 
                                             from { transform: rotate(0deg); }
@@ -619,6 +622,15 @@
                     margin-bottom: 20px;
                     padding: 10px 0;
                     color: $footer-font-color;
+                    box-shadow: $buttonshadow;
+
+
+                    &:active, &:hover {
+                        box-shadow: $hoverbutton-shadow;
+                        @include gradual-change;
+                    }
+
+
                     }
 
                 
