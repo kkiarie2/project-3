@@ -32,7 +32,9 @@
         .preloadwrap{
             width: 100%;
             display: flex;
+            flex-direction: column;
             animation: fadein 1s ease-in;
+            
 
             
 
@@ -229,7 +231,7 @@
                  .cuisine.first {
                     animation: slightdelay 300ms ease-in-out;
                     animation-delay: 1300ms;
-                    animation-fill-mode: backwards;
+                    animation-fill-mode: forwards;
                     
 
                  }
@@ -237,14 +239,14 @@
                 .cuisine.second {
                     animation: slightdelay 300ms ease-in-out;
                     animation-delay: 1600ms;
-                    animation-fill-mode: backwards;
+                    animation-fill-mode: forwards;
                     
                 }
 
                 .cuisine.third {
                     animation: slightdelay 300ms ease-in-out;
                     animation-delay: 2000ms;
-                    animation-fill-mode: backwards;
+                    animation-fill-mode: forwards;
                     
                 }
 
@@ -343,6 +345,7 @@
                               margin-right: auto;
                               position: relative;
                               z-index: 1;
+                              background-color: $footer-font-color;
 
 
 
@@ -359,6 +362,13 @@
                                 padding-top: 0;
                                 padding-bottom: 0;
                                 flex-direction: row;
+                            }
+
+
+                            &:hover {
+                                cursor: pointer;
+                                box-shadow: $delicacy-hover-shadow;
+                                background-color: lighten($footer-font-color, 10%);
                             }
 
 
@@ -381,6 +391,7 @@
 
                                         &:hover {
                                             width: 80%;
+                                            
                                         }
 
 
@@ -469,8 +480,8 @@
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
-                                        border-top-right-radius: 20px;
-                                        border-bottom-right-radius: 20px;
+                                        border-top-right-radius: 15px;
+                                        border-bottom-right-radius: 15px;
                                         background-color: $tertiary-color;
                                         width: 0;
                                         margin-left: auto;

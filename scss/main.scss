@@ -17,9 +17,7 @@ body{
     color: $text-color;
     position: relative;
     z-index: -1;
-    
-    
-    
+  
 
 
 
@@ -89,6 +87,7 @@ body{
             flex-direction: column;
             flex-wrap: wrap;
             width: 100%;
+            
            
             @include smalltablet{
                 flex-direction: row;
@@ -216,6 +215,7 @@ body{
                         &:hover {
                             background-color: lighten($primary-color, 35%);
                             box-shadow: $hoverbutton-shadow;
+                            cursor: pointer;
                             @include gradual-change;
                         }
 
@@ -348,7 +348,7 @@ body{
          
              }
          
-             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            
          
          
          }
@@ -368,12 +368,15 @@ body{
                  background-color: $backgrey;
                  width: 100%;
 
+
+
+
                  
 
 
 
                  &__title {
-                     display: flex;
+                     display: block;
                      width: 100%;
                      margin-bottom: 2rem;
                  }
@@ -418,6 +421,29 @@ body{
                                     border-radius: 25px;
                                     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                                     position: relative;
+                                    z-index: 1;
+
+
+
+                                    &:hover {
+
+                                    box-shadow: rgba(99, 99, 99, 0.2) 0px 8px 8px 8px;
+                                        
+                                    }
+
+
+                                    
+                                    a { 
+                                        
+                                        text-decoration: none; 
+                                        cursor: pointer; 
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 40; 
+                                    }
 
                                     @include smalltablet{
                                         width: 40%;
@@ -650,6 +676,10 @@ body{
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: 4;
+
+    @include desktop {
+        top: 350px;
+    }
     
 
 

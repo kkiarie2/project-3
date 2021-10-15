@@ -17,6 +17,7 @@ $descriptionbackground: white;
 $fonttype-light: 300;
 $bastillebackground: #f6f6f6;
 $shadowsetting: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$delicacy-hover-shadow: rgba(99, 99, 99, 0.2) 0px 8px 8px 3px;
 $buttonshadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 $hoverbutton-shadow: rgba(0, 0, 0, 0.24) 1px 3px 7px,
                     rgba(0, 0, 0, 0.24) -1px -3px 7px;
@@ -65,7 +66,7 @@ $explore-color: linear-gradient(180deg, $secondary-color, $primary-color);
 
 
 @mixin gradual-change {
-    transition: all 5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 
