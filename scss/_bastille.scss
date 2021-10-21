@@ -321,12 +321,14 @@
 
              .meal {
                 margin-bottom: 10px;
-                padding-bottom: 10px;
+                padding-bottom: 0;
                 position: relative;
                 margin-top: 20px;
 
                         h5 {
                             font-weight: $fonttype-light;
+                            margin-block-start: 0;
+                            margin-block-end: 10px;
                             
 
                         }

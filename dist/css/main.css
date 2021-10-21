@@ -683,13 +683,17 @@
 
 .meal {
   margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   position: relative;
   margin-top: 20px;
 }
 
 .meal h5 {
   font-weight: 300;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 10px;
+          margin-block-end: 10px;
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
