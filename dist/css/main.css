@@ -537,6 +537,62 @@
           align-items: center;
 }
 
+.allmenus section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 769px) {
+  .allmenus section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 47%;
+  }
+}
+
+@media (min-width: 769px) {
+  .allmenus .ordersection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+
 @media (min-width: 769px) {
   .allmenus {
     display: -webkit-box;
@@ -570,7 +626,7 @@
 
 @media (min-width: 769px) {
   .cuisine {
-    width: 47%;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -626,11 +682,14 @@
 }
 
 .meal {
-  font-weight: 300;
-  margin-top: 20px;
   margin-bottom: 10px;
   padding-bottom: 10px;
   position: relative;
+  margin-top: 20px;
+}
+
+.meal h5 {
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
@@ -684,7 +743,7 @@
 
 @media (min-width: 769px) {
   .delicacy {
-    width: 462.36px;
+    max-width: 462.36px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 0;
@@ -950,6 +1009,11 @@
   color: #FFFFFF;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.order h6 {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .order:active, .order:hover {
@@ -1796,7 +1860,7 @@ body .contentwrap main .restaurants__available .options__description .heart {
   position: relative;
 }
 
-body .contentwrap main .restaurants__available .options__description .heart #far {
+body .contentwrap main .restaurants__available .options__description .heart .far {
   display: block;
   color: #000000;
   position: absolute;
@@ -1808,7 +1872,7 @@ body .contentwrap main .restaurants__available .options__description .heart #far
   transition: opacity 50ms ease-in;
 }
 
-body .contentwrap main .restaurants__available .options__description .heart #solid {
+body .contentwrap main .restaurants__available .options__description .heart .solid {
   display: block;
   color: #9356DC;
   position: absolute;
@@ -1820,12 +1884,12 @@ body .contentwrap main .restaurants__available .options__description .heart #sol
   transition: opacity 500ms ease-in;
 }
 
-body .contentwrap main .restaurants__available .options:hover #solid {
+body .contentwrap main .restaurants__available .options:hover .solid {
   opacity: 1;
   z-index: 2;
 }
 
-body .contentwrap main .restaurants__available .options:hover #far {
+body .contentwrap main .restaurants__available .options:hover .far {
   opacity: 0;
 }
 

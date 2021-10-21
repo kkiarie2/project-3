@@ -192,6 +192,37 @@
                  .allmenus {
                      width: 100%;
                      @include flexsetting (column, center, center); 
+
+
+
+                     section {
+                         width: 100%;
+                         display: flex;
+                         @include flexsetting (column, center, center); 
+
+
+
+
+                         @include desktop {
+                            @include flexsetting (row, center, center);
+                            width: 47%;
+                            
+                         }
+
+
+
+
+                     }
+
+                     .ordersection {
+
+                        @include desktop {
+                            @include flexsetting (row, center, center);
+                            width: 100%;
+                            
+                         }
+
+                     }
                      
 
 
@@ -220,7 +251,7 @@
 
 
                      @include desktop {
-                        width: 47%;
+                        width: 100%;
                         flex-direction: column;
 
                      }
@@ -289,12 +320,16 @@
 
 
              .meal {
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                position: relative;
+                margin-top: 20px;
 
-                                font-weight: $fonttype-light;
-                                margin-top: 20px;
-                                margin-bottom: 10px;
-                                padding-bottom: 10px;
-                                position: relative;
+                        h5 {
+                            font-weight: $fonttype-light;
+                            
+
+                        }
 
 
                                 @include smalltablet {
@@ -356,7 +391,7 @@
 
 
                               @include desktop {
-                                width: 462.36px;
+                                max-width: 462.36px;
                                 margin-left: auto;
                                 margin-right: auto;
                                 padding-top: 0;
@@ -634,6 +669,12 @@
                     padding: 10px 0;
                     color: $footer-font-color;
                     box-shadow: $buttonshadow;
+
+
+                    h6{
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
 
 
                     &:active, &:hover {

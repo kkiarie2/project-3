@@ -573,7 +573,7 @@ body{
                                             position: relative;
 
 
-                                            #far {
+                                            .far {
                                                 display: block;
                                                 color: $footer-background;
                                                 position: absolute;
@@ -587,7 +587,7 @@ body{
                                                 
                                             }
 
-                                            #solid {
+                                            .solid {
                                                 display: block;
                                                 color: $primary-color;
                                                 position: absolute;
@@ -619,14 +619,14 @@ body{
                                         
                                     }
 
-                                    &:hover #solid{
+                                    &:hover .solid{
 
                                         opacity: 1;
                                         z-index: 2;
                                        
                                         
                                     } 
-                                    &:hover #far{
+                                    &:hover .far{
 
                                         opacity: 0;
                                        
