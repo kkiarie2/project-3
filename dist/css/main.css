@@ -461,6 +461,12 @@
   padding-left: 20px;
 }
 
+.wrapdiv .intro__titlediv .title h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .wrapdiv .intro__titlediv .titleicon {
   display: -webkit-box;
   display: -ms-flexbox;
