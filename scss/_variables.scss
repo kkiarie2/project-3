@@ -123,15 +123,6 @@ $explore-color: linear-gradient(180deg, $secondary-color, $primary-color);
 
 
 
-
-
-@keyframes fadein {
-    0% { opacity: 0;}
-
-    100% {opacity: 0;}
-}
-
-
 @keyframes hideloading {
     0% { opacity: 1;}
 

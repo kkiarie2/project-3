@@ -89,7 +89,7 @@
                                     
                                         @include desktop {
                                             display: flex;
-                                            display: row;
+                                            flex-direction: row;
                                             align-items: center;
                                             width: auto;
                                             }
@@ -374,14 +374,12 @@
 
                              box-shadow: $shadowsetting;
                              border-radius: 15px;
-                             display: flex;
+                             @include flexsetting (row, flex-start, center);
                               width: 94%;
                               margin: 10px 3%;
-                              justify-content: flex-start;
                               margin-left: auto;
                               margin-right: auto;
                               position: relative;
-                              z-index: 1;
                               background-color: $footer-font-color;
 
 
@@ -409,9 +407,7 @@
                             }
 
 
-                                    > div {
-                                        flex-direction: row;
-                                    }
+                                    
 
                                     .menu{
                                                 
@@ -419,17 +415,17 @@
                                         display: flex;
                                         flex-direction: column;
                                         justify-content: flex-start;
-                                        width: 100%;
+                                        width: 75%;
                                         padding: 2% 5% 2% 5%;
                                         position: relative;
-                                        z-index: 1;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        
 
 
 
-                                        &:hover {
-                                            width: 80%;
-                                            
-                                        }
+                                        
 
 
 
@@ -437,7 +433,7 @@
                                         @include desktop {
                                             padding-top: 0;
                                             padding-bottom: 0;
-                                            flex: column;
+                                            flex-direction: column;
                                         }
 
 
@@ -451,6 +447,19 @@
                                                 width: 100%;
                                                 font-size: 13px;
                                                 align-items: flex-start;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+
+
+
+                                                p {
+                                                    white-space: nowrap;
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                }
+
+
 
                                                 @include smalltablet {
                                                     font-size: 15px;
@@ -474,6 +483,10 @@
                                             height: auto;
                                             margin-left: 0;
                                             font-size: 12px;
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+
 
                                             @include smalltablet {
                                                 font-size: 14px;
@@ -489,16 +502,15 @@
                                             }
 
 
-                                            .cost{
-                                                font-weight: bold;
-                                                margin-left: auto;
-
-
-                                                @include desktop {
-                                                    font-size: 16px;
-                                                    margin-left: auto;
-                                                }
+                                            .veges {
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                margin-right: 50px;
                                             }
+
+
+                                           
                                         }
 
 
@@ -511,16 +523,36 @@
                                     }
 
 
+                                    .cost{
+                                        @include flexsetting (row, center, flex-end);
+                                        width: 10%;
+                                        right: 0;
+                                        font-weight: bold;
+                                        margin-left: auto;
+                                        margin-right: 30px;
+                                        
+
+
+                                        @include desktop {
+                                            font-size: 16px;
+                                            margin-left: auto;
+                                        }
+                                    }
+
+
+
+
                                     .hiddenx  {
                                         
-                                        z-index: -1;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
+                                        
+                                        @include flexsetting (column, center, center);
+                                        position: absolute;
+                                        right: 0;
                                         border-top-right-radius: 15px;
                                         border-bottom-right-radius: 15px;
                                         background-color: $tertiary-color;
                                         width: 0;
+                                        min-height: 100%;
                                         margin-left: auto;
                                         overflow: hidden;
                                         transition:all 0.6s ease;
@@ -530,7 +562,7 @@
 
                                         i {
 
-                                            font: $tertiary-color;
+                                            
                                             color: $footer-font-color;
                                             font-size: 1.5rem;
 
@@ -542,34 +574,57 @@
                                     }
 
 
-                                    
+                                    &:hover .menu {
 
+                                        width: 40%;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
 
-
-                                    .menu:hover + .hiddenx  {
-                                        
-                                        width: 20%;
-                                        @include gradual-change;
-                                        
-                                        
-
+                                    &:hover menu__item {
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
                                     }
 
 
-                                    .menu:hover + .hiddenx i {
+                                    &:hover .cost {
+                                        right: 30%;
+                                        position: relative;
+                                    }
+
+
+                                    
+                                    &:hover  .hiddenx  {
+                                        
+                                        width: 30%;
+                
+                                        @include gradual-change;
+                                        
+                                        
+                
+                                    }
+                
+                
+                                    &:hover  .hiddenx i {
                                         animation: rotation 0.2s;
                                         animation-iteration-count: 1;
                                         animation-timing-function: linear;
                                         animation-delay: 0.3s;
                                         
-
+                
                                         @keyframes rotation { 
                                             from { transform: rotate(0deg); }
                                              to  { transform: rotate(360deg); }
                                          }
                                        
-
+                
                                     }
+                
+
+
+
 
 
 
@@ -687,6 +742,12 @@
 
                     }
 
+
+
+
+
+
+                    
                 
 
 

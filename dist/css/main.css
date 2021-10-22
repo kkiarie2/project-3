@@ -70,24 +70,6 @@
   }
 }
 
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 @-webkit-keyframes hideloading {
   0% {
     opacity: 1;
@@ -139,15 +121,6 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
@@ -410,7 +383,10 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    display: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -733,15 +709,21 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 94%;
-  margin: 10px 3%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 94%;
+  margin: 10px 3%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  z-index: 1;
   background-color: #FFFFFF;
 }
 
@@ -766,13 +748,6 @@
   background-color: white;
 }
 
-.delicacy > div {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
 .delicacy .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -784,23 +759,22 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 100%;
+  width: 75%;
   padding: 2% 5% 2% 5%;
   position: relative;
-  z-index: 1;
-}
-
-.delicacy .menu:hover {
-  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: 769px) {
   .delicacy .menu {
     padding-top: 0;
     padding-bottom: 0;
-    -webkit-box-flex: column;
-        -ms-flex: column;
-            flex: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -814,6 +788,15 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.delicacy .menu__item p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
@@ -843,6 +826,9 @@
   height: auto;
   margin-left: 0;
   font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 576px) and (min-width: 481px) {
@@ -863,33 +849,62 @@
   }
 }
 
-.delicacy .menu__ingredient .cost {
+.delicacy .menu__ingredient .veges {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 50px;
+}
+
+.delicacy .cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 10%;
+  right: 0;
   font-weight: bold;
   margin-left: auto;
+  margin-right: 30px;
 }
 
 @media (min-width: 769px) {
-  .delicacy .menu__ingredient .cost {
+  .delicacy .cost {
     font-size: 16px;
     margin-left: auto;
   }
 }
 
 .delicacy .hiddenx {
-  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  right: 0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #99E2D0;
   width: 0;
+  min-height: 100%;
   margin-left: auto;
   overflow: hidden;
   -webkit-transition: all 0.6s ease;
@@ -897,18 +912,35 @@
 }
 
 .delicacy .hiddenx i {
-  font: #99E2D0;
   color: #FFFFFF;
   font-size: 1.5rem;
 }
 
-.delicacy .menu:hover + .hiddenx {
-  width: 20%;
+.delicacy:hover .menu {
+  width: 40%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.delicacy:hover menu__item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.delicacy:hover .cost {
+  right: 30%;
+  position: relative;
+}
+
+.delicacy:hover .hiddenx {
+  width: 30%;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-.delicacy .menu:hover + .hiddenx i {
+.delicacy:hover .hiddenx i {
   -webkit-animation: rotation 0.2s;
           animation: rotation 0.2s;
   -webkit-animation-iteration-count: 1;
@@ -1526,7 +1558,6 @@ body .contentwrap main .information .process__instructions .steps .number {
 
 body .contentwrap main .information .process__instructions .steps .number i {
   margin-right: auto;
-  text-justify: middle;
   text-align: center;
   line-height: 8px;
   -ms-flex-item-align: center;
